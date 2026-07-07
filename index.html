@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="color-scheme" content="only light">
+<meta name="description" content="特別なスキルも、まとまった時間もいらない。AIという相棒と最初の1円をつくる、超初心者のためのAI副業0→1講座。">
+<title>超初心者のためのAI副業 0→1講座｜無料特典</title>
+<style>
+  :root{
+    --kurimu:#fffcf5;
+    --shiro:#ffffff;
+    --kokuban:#3a3833;
+    --moji2:#5f5b52;
+    --moji3:#6e6a60;
+    --sen:#efe9dc;
+    --sango:#ef8a5a;      --sango-text:#a84a1c;      --sango-soft:#fdeee4;
+    --sora:#5b9fc9;       --sora-text:#2e6f9e;       --sora-soft:#e7f1f7;
+    --wakaba:#6aa96e;     --wakaba-text:#35693a;     --wakaba-soft:#e9f3e9;
+    --hachimitsu:#f2b64b; --hachimitsu-text:#8a5f0e; --hachimitsu-soft:#fdf3dd;
+    --line-midori:#04803e;
+    --kage:0 1px 2px rgba(58,56,51,.04),0 12px 32px rgba(58,56,51,.07);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif;
+    background:var(--kurimu);color:var(--kokuban);
+    font-size:15px;line-height:1.95;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:clip;
+    padding-bottom:env(safe-area-inset-bottom);
+  }
+  .marugo{font-family:"Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN","Hiragino Sans",sans-serif}
+  img,svg{max-width:100%;height:auto}
+  a{color:var(--sora-text)}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--hachimitsu);outline-offset:3px}
+  svg text{font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans",sans-serif}
+
+  /* 虹の帯 */
+  .niji{height:6px;background:linear-gradient(90deg,var(--sango),var(--hachimitsu),var(--wakaba),var(--sora))}
+
+  /* 表紙（明るいクリーム地） */
+  .tobira{padding:56px 24px 44px;text-align:center}
+  .tobira-uchi{max-width:620px;margin:0 auto}
+  .tobira-badge{
+    display:inline-block;background:var(--wakaba-soft);color:var(--wakaba-text);
+    font-size:13px;font-weight:600;letter-spacing:.06em;
+    border:1.5px solid var(--wakaba);border-radius:999px;padding:6px 18px;
+    margin-bottom:18px;
+    font-family:"Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN",sans-serif;
+  }
+  .tobira-mayu{
+    font-size:11.5px;letter-spacing:.3em;color:var(--hachimitsu-text);
+    margin-bottom:26px;
+  }
+  .tobira svg{display:block;margin:0 auto 22px}
+  .tobira h1{
+    font-family:"Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN","Hiragino Sans",sans-serif;
+    font-size:28px;font-weight:600;line-height:1.7;letter-spacing:.04em;
+    text-wrap:balance;margin-bottom:22px;
+  }
+  .ji-sango{color:var(--sango-text)}
+  .ji-sora{color:var(--sora-text)}
+  .ji-hachi{color:var(--hachimitsu-text)}
+  .tobira-riido{
+    font-size:14.5px;line-height:2.15;color:var(--moji2);
+    letter-spacing:.02em;
+  }
+  .tobira-yajirushi{margin-top:34px}
+  .tobira-yajirushi svg{margin:0 auto}
+
+  /* 本文の器 */
+  .hon{max-width:620px;margin:0 auto;padding:0 24px 8px}
+
+  /* 章の反復リズム＋章色テーマ */
+  .shou{margin-top:84px;--iro:var(--hachimitsu-text);--iro-nama:var(--hachimitsu);--iro-soft:var(--hachimitsu-soft)}
+  .shou.iro-sango{--iro:var(--sango-text);--iro-nama:var(--sango);--iro-soft:var(--sango-soft)}
+  .shou.iro-sora{--iro:var(--sora-text);--iro-nama:var(--sora);--iro-soft:var(--sora-soft)}
+  .shou.iro-wakaba{--iro:var(--wakaba-text);--iro-nama:var(--wakaba);--iro-soft:var(--wakaba-soft)}
+  .mayu{
+    display:flex;align-items:center;gap:8px;
+    font-size:12px;letter-spacing:.16em;color:var(--iro);font-weight:600;
+    margin-bottom:12px;
+    font-family:"Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN",sans-serif;
+  }
+  .mayu::before{
+    content:"";width:12px;height:12px;border-radius:4px;
+    background:var(--iro-nama);flex-shrink:0;
+  }
+  .shou h2{
+    font-family:"Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN","Hiragino Sans",sans-serif;
+    font-size:22px;font-weight:600;line-height:1.65;letter-spacing:.03em;
+    text-wrap:balance;margin-bottom:16px;
+  }
+  .shou p{color:var(--moji2);margin-bottom:1.3em}
+  .tsuyome{color:var(--kokuban);font-weight:600}
+
+  /* 図解カード */
+  .zukai{
+    background:var(--shiro);border:1.5px solid var(--sen);border-radius:20px;
+    padding:24px 16px 20px;margin:26px 0;box-shadow:var(--kage);
+  }
+  .zukai-dai{
+    text-align:center;font-size:12.5px;letter-spacing:.14em;font-weight:600;
+    color:var(--iro);margin-bottom:16px;
+    font-family:"Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN",sans-serif;
+  }
+  .zukai svg{width:100%;display:block}
+  .zukai-soe{
+    text-align:center;font-size:12.5px;color:var(--moji3);
+    line-height:1.85;margin-top:12px;
+  }
+
+  /* たとえば話（架空例）カード */
+  .rei{
+    background:var(--shiro);border:1.5px solid var(--iro-nama);border-radius:20px;
+    padding:0;margin:26px 0;overflow:hidden;box-shadow:var(--kage);
+  }
+  .rei-obi{
+    background:var(--iro-soft);padding:12px 18px;
+    font-size:13px;font-weight:600;color:var(--iro);letter-spacing:.04em;
+    font-family:"Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN",sans-serif;
+  }
+  .rei-naka{padding:20px 16px 16px}
+  .rei svg{width:100%;display:block}
+  .rei-chu{
+    padding:0 18px 16px;font-size:11.5px;color:var(--moji3);line-height:1.8;
+  }
+
+  /* 強みカード（3枚） */
+  .tsuyomi{display:flex;flex-direction:column;gap:12px;margin-top:22px}
+  .tsuyomi-fuda{
+    background:var(--shiro);border:1.5px solid var(--sen);border-radius:18px;
+    padding:18px 20px 16px;display:flex;gap:14px;align-items:flex-start;
+  }
+  .tsuyomi-ban{
+    flex-shrink:0;width:32px;height:32px;border-radius:11px;
+    color:#fff;font-size:15px;font-weight:600;
+    display:flex;align-items:center;justify-content:center;margin-top:3px;
+    font-variant-numeric:tabular-nums;
+  }
+  .tsuyomi-fuda:nth-child(1) .tsuyomi-ban{background:var(--sango-text)}
+  .tsuyomi-fuda:nth-child(2) .tsuyomi-ban{background:var(--sora-text)}
+  .tsuyomi-fuda:nth-child(3) .tsuyomi-ban{background:var(--wakaba-text)}
+  .tsuyomi-fuda h3{font-size:15.5px;font-weight:600;margin-bottom:5px;letter-spacing:.03em}
+  .tsuyomi-fuda p{font-size:13.5px;line-height:1.9;color:var(--moji2);margin:0}
+
+  /* ことば（章の締め・丸ゴ） */
+  .kotoba{
+    font-family:"Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN",sans-serif;
+    text-align:center;font-size:16px;line-height:2.15;letter-spacing:.04em;
+    color:var(--kokuban);margin:36px 0 0;text-wrap:balance;font-weight:600;
+  }
+  .kotoba .shirushi{color:var(--iro)}
+
+  /* 手順（2×2） */
+  .tejun{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .tejun-koma{
+    background:var(--iro-soft);border:1.5px solid var(--iro-nama);border-radius:14px;
+    padding:14px 13px 12px;position:relative;
+  }
+  .tejun-ban{
+    position:absolute;top:11px;right:12px;
+    font-size:11px;font-weight:600;color:var(--iro);letter-spacing:.08em;
+    font-variant-numeric:tabular-nums;
+  }
+  .tejun-koma svg{display:block;margin-bottom:8px}
+  .tejun-koma h4{font-size:13px;font-weight:600;line-height:1.6;letter-spacing:.02em}
+
+  /* 販売先カード */
+  .basho{display:flex;flex-direction:column;gap:10px;margin-top:22px}
+  .basho-gyo{
+    background:var(--shiro);border:1.5px solid var(--sen);border-radius:16px;
+    padding:16px 20px;
+  }
+  .basho-na{
+    font-size:14.5px;font-weight:600;margin-bottom:3px;
+    display:flex;align-items:center;gap:10px;
+  }
+  .basho-na .fuda{
+    font-size:10.5px;font-weight:600;letter-spacing:.06em;color:var(--sango-text);
+    background:var(--sango-soft);border:1px solid var(--sango);
+    border-radius:999px;padding:2px 10px;
+  }
+  .basho-gyo p{font-size:13px;line-height:1.85;color:var(--moji2);margin:0}
+
+  /* 注意カード */
+  .kokoroe{
+    background:var(--wakaba-soft);border:1.5px solid var(--wakaba);border-radius:18px;
+    padding:22px 20px;margin-top:22px;
+  }
+  .kokoroe h3{
+    font-size:14px;font-weight:600;letter-spacing:.05em;color:var(--wakaba-text);
+    margin-bottom:12px;
+    font-family:"Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN",sans-serif;
+  }
+  .kokoroe ul{list-style:none}
+  .kokoroe li{
+    font-size:13.5px;line-height:1.9;color:var(--moji2);
+    padding-left:20px;position:relative;margin-bottom:9px;
+  }
+  .kokoroe li:last-child{margin-bottom:0}
+  .kokoroe li::before{
+    content:"";position:absolute;left:2px;top:10px;
+    width:8px;height:8px;border-radius:50%;background:var(--wakaba);
+  }
+
+  /* コピペ用プロンプト枠（明るい） */
+  .purompt{
+    background:var(--shiro);border:2px solid var(--iro-nama);border-radius:16px;
+    overflow:hidden;margin:24px 0 12px;
+  }
+  .purompt-obi{
+    display:flex;justify-content:space-between;align-items:center;gap:8px;
+    padding:11px 16px;background:var(--iro-soft);
+  }
+  .purompt-obi .na{
+    font-size:12px;letter-spacing:.1em;color:var(--iro);font-weight:600;
+    font-family:"Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN",sans-serif;
+  }
+  .purompt-obi .hinto{font-size:11.5px;color:var(--moji2);flex-shrink:0}
+  .purompt-text{
+    padding:18px 18px 20px;font-size:13.5px;line-height:2.05;
+    color:var(--kokuban);overflow-x:auto;margin:0;
+  }
+  .purompt-soe{font-size:12.5px;line-height:1.9;color:var(--moji3)}
+
+  /* 相場の帯グラフ */
+  .souba{margin-top:22px;display:flex;flex-direction:column;gap:13px}
+  .souba-gyo{display:flex;flex-direction:column;gap:5px}
+  .souba-ue{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+  .souba-na{font-size:13px;color:var(--moji2)}
+  .souba-kingaku{
+    font-size:14px;font-weight:600;color:var(--sora-text);
+    font-variant-numeric:tabular-nums;letter-spacing:.02em;flex-shrink:0;
+  }
+  .souba-shita{height:12px;background:var(--sen);border-radius:6px;overflow:hidden}
+  .souba-bou{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--sora),var(--sora-text))}
+  .souba-chu{font-size:12.5px;color:var(--moji3);margin-top:2px}
+
+  /* 凡例チップ */
+  .hanrei{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:14px}
+  .hanrei span{
+    font-size:12px;letter-spacing:.03em;border-radius:999px;padding:4px 14px;font-weight:600;
+  }
+  .hanrei .ai-gawa{background:var(--wakaba-soft);border:1.5px solid var(--wakaba);color:var(--wakaba-text)}
+  .hanrei .hito-gawa{background:var(--sango-soft);border:1.5px solid var(--sango);color:var(--sango-text)}
+
+  /* 価格チップ */
+  .nedan{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 6px}
+  .nedan span{
+    background:var(--shiro);border:1.5px solid var(--sen);border-radius:14px;
+    padding:11px 16px;font-size:12.5px;color:var(--moji2);line-height:1.6;
+  }
+  .nedan b{
+    display:block;font-size:16px;color:var(--wakaba-text);font-weight:600;
+    font-variant-numeric:tabular-nums;letter-spacing:.02em;
+  }
+
+  /* 正直カード */
+  .shoujiki{
+    background:var(--hachimitsu-soft);border:1.5px solid var(--hachimitsu);border-radius:18px;
+    padding:22px 20px;margin-top:22px;
+  }
+  .shoujiki h3{
+    font-size:14px;font-weight:600;letter-spacing:.05em;color:var(--hachimitsu-text);
+    margin-bottom:10px;
+    font-family:"Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN",sans-serif;
+  }
+  .shoujiki p{font-size:13.5px;line-height:1.95;color:var(--moji2);margin:0}
+
+  /* しめくくり（CTA・明るい） */
+  .musubi{
+    background:var(--shiro);border:1.5px solid var(--sen);border-radius:24px;
+    padding:8px 26px 36px;margin-top:84px;text-align:center;box-shadow:var(--kage);
+  }
+  .musubi svg{display:block;margin:0 auto}
+  .musubi h2{
+    font-family:"Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN","Hiragino Sans",sans-serif;
+    font-size:21px;font-weight:600;line-height:1.75;letter-spacing:.04em;
+    text-wrap:balance;margin:6px 0 16px;
+  }
+  .musubi p{font-size:13.5px;line-height:2.1;color:var(--moji2);margin-bottom:22px}
+  .musubi-botan{
+    display:block;background:var(--line-midori);color:#fff;
+    text-decoration:none;font-weight:600;font-size:15px;letter-spacing:.03em;
+    border-radius:999px;padding:17px 16px;line-height:1.6;
+    font-family:"Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN",sans-serif;
+  }
+  .musubi-botan:active{opacity:.85}
+  .musubi p.musubi-shita{font-size:11.5px;color:var(--moji3);margin-top:12px;margin-bottom:0}
+
+  footer{
+    max-width:620px;margin:52px auto 0;padding:0 24px 68px;
+    text-align:center;
+  }
+  footer .shirushi{
+    font-family:"Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN",sans-serif;
+    font-size:13px;font-weight:600;letter-spacing:.08em;color:var(--moji2);margin-bottom:14px;
+  }
+  footer p{font-size:12px;line-height:1.9;color:var(--moji3)}
+</style>
+</head>
+<body>
+
+<div class="niji"></div>
+
+<!-- 表紙 -->
+<header class="tobira">
+  <div class="tobira-uchi">
+    <div class="tobira-badge">🔰 はじめてでも大丈夫</div>
+    <div class="tobira-mayu">無料特典｜保存版</div>
+
+    <!-- 図解A: 0→1の虹アーチ -->
+    <svg width="300" height="150" viewBox="0 0 320 160" fill="none" role="img" aria-label="ゼロからイチへ、虹の橋をわたる図">
+      <line x1="24" y1="128" x2="296" y2="128" stroke="#efe9dc" stroke-width="2"/>
+      <path d="M96 92 Q160 22 236 44" stroke="#ef8a5a" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 9"/>
+      <path d="M99 104 Q163 40 240 58" stroke="#f2b64b" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 9"/>
+      <path d="M100 116 Q166 58 243 72" stroke="#6aa96e" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 9"/>
+      <circle cx="64" cy="96" r="30" stroke="#a84a1c" stroke-width="3" fill="#fdeee4"/>
+      <rect x="252" y="30" width="7" height="98" rx="3.5" fill="#2e6f9e"/>
+      <path d="M255 33 L238 48" stroke="#2e6f9e" stroke-width="7" stroke-linecap="round"/>
+      <path d="M259 30 L282 38 L259 48 Z" fill="#5b9fc9"/>
+      <circle cx="292" cy="26" r="3" fill="#ef8a5a"/>
+      <circle cx="228" cy="14" r="2.5" fill="#6aa96e"/>
+      <circle cx="270" cy="66" r="2.5" fill="#f2b64b"/>
+      <text x="64" y="150" text-anchor="middle" font-size="11.5" fill="#6e6a60">いまのあなた</text>
+      <text x="256" y="150" text-anchor="middle" font-size="11.5" font-weight="600" fill="#2e6f9e">これからのあなた</text>
+    </svg>
+
+    <h1>超初心者のための<br>AI副業 <span class="ji-sango">0</span><span class="ji-hachi">→</span><span class="ji-sora">1</span>講座</h1>
+    <p class="tobira-riido">
+      特別なスキルも、まとまった時間もいりません。<br>
+      AIという相棒を手に入れた今日が、<br>
+      あなたの“最初の1円”へのスタートです。
+    </p>
+    <div class="tobira-yajirushi">
+      <svg width="22" height="12" viewBox="0 0 22 12" fill="none" aria-hidden="true">
+        <path d="M2 2 L11 10 L20 2" stroke="#b9b3a4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<div class="hon">
+
+  <!-- はじめに -->
+  <div class="shou iro-wakaba">
+    <div class="mayu">はじめに</div>
+    <h2 class="marugo">会社員こそ、<br>AI副業がうまくいく</h2>
+    <p>
+      必要なのは才能ではなく、<span class="tsuyome">正しい手順</span>だけ。<br>
+      この資料では、その手順を<br>
+      3つに絞ってお渡しします。
+    </p>
+
+    <!-- 図解B: 全体地図（3つの扉） -->
+    <div class="zukai">
+      <div class="zukai-dai">この講座の全体地図</div>
+      <svg viewBox="0 0 320 252" fill="none" role="img" aria-label="3つの強みを知り、3つのノウハウの扉を開けて、0→1を達成する地図">
+        <rect x="76" y="10" width="168" height="40" rx="20" fill="#fdf3dd" stroke="#f2b64b" stroke-width="1.5"/>
+        <text x="160" y="35" text-anchor="middle" font-size="12.5" font-weight="600" fill="#3a3833">AIの3つの強みを知る</text>
+        <path d="M160 50 L160 68" stroke="#8a5f0e" stroke-width="2" stroke-linecap="round"/>
+        <path d="M154 62 L160 70 L166 62" stroke="#8a5f0e" stroke-width="2" stroke-linecap="round" fill="none"/>
+        <rect x="12" y="80" width="92" height="76" rx="14" fill="#fdeee4" stroke="#ef8a5a" stroke-width="1.5"/>
+        <circle cx="88" cy="118" r="3" fill="#a84a1c"/>
+        <text x="58" y="112" text-anchor="middle" font-size="12" font-weight="600" fill="#a84a1c">その1</text>
+        <text x="58" y="136" text-anchor="middle" font-size="12" fill="#3a3833">画像販売</text>
+        <rect x="114" y="80" width="92" height="76" rx="14" fill="#e7f1f7" stroke="#5b9fc9" stroke-width="1.5"/>
+        <circle cx="190" cy="118" r="3" fill="#2e6f9e"/>
+        <text x="160" y="112" text-anchor="middle" font-size="12" font-weight="600" fill="#2e6f9e">その2</text>
+        <text x="160" y="136" text-anchor="middle" font-size="12" fill="#3a3833">Webページ</text>
+        <rect x="216" y="80" width="92" height="76" rx="14" fill="#e9f3e9" stroke="#6aa96e" stroke-width="1.5"/>
+        <circle cx="292" cy="118" r="3" fill="#35693a"/>
+        <text x="262" y="112" text-anchor="middle" font-size="12" font-weight="600" fill="#35693a">その3</text>
+        <text x="262" y="136" text-anchor="middle" font-size="12" fill="#3a3833">SNS×note</text>
+        <path d="M58 156 L58 176 Q58 190 82 190 L128 190" stroke="#efe9dc" stroke-width="2" fill="none"/>
+        <path d="M262 156 L262 176 Q262 190 238 190 L192 190" stroke="#efe9dc" stroke-width="2" fill="none"/>
+        <path d="M160 156 L160 186" stroke="#efe9dc" stroke-width="2"/>
+        <rect x="70" y="196" width="180" height="42" rx="21" fill="#35693a"/>
+        <text x="160" y="222" text-anchor="middle" font-size="13" font-weight="600" fill="#ffffff">あなたの“0→1”達成</text>
+      </svg>
+      <div class="zukai-soe">この順番で、そのまま進めば大丈夫 ✨</div>
+    </div>
+  </div>
+
+  <!-- 第1章 -->
+  <div class="shou">
+    <div class="mayu">第1章</div>
+    <h2 class="marugo">なぜ今、AIなのか。<br>3つの理由</h2>
+    <p>
+      「才能の差」が「手順の差」に変わった。<br>
+      それがAI副業の、いちばん大きな変化です。
+    </p>
+
+    <!-- 図解C: 3本柱 -->
+    <div class="zukai">
+      <div class="zukai-dai">あなたを支える3本の柱</div>
+      <svg viewBox="0 0 320 212" fill="none" role="img" aria-label="賢い・再現性・自動化の3本の柱が、あなたの0→1を支える図">
+        <rect x="44" y="16" width="232" height="38" rx="12" fill="#fdf3dd" stroke="#f2b64b" stroke-width="1.5"/>
+        <text x="160" y="40" text-anchor="middle" font-size="13" font-weight="600" fill="#3a3833">あなたの0→1</text>
+        <rect x="56" y="66" width="60" height="92" rx="10" fill="#fdeee4" stroke="#ef8a5a" stroke-width="1.5"/>
+        <circle cx="86" cy="92" r="10" stroke="#a84a1c" stroke-width="2" fill="#ffffff"/>
+        <path d="M82 104 L90 104" stroke="#a84a1c" stroke-width="2" stroke-linecap="round"/>
+        <text x="86" y="140" text-anchor="middle" font-size="12.5" font-weight="600" fill="#3a3833">賢い</text>
+        <rect x="130" y="66" width="60" height="92" rx="10" fill="#e7f1f7" stroke="#5b9fc9" stroke-width="1.5"/>
+        <rect x="146" y="84" width="20" height="20" rx="4" fill="#ffffff" stroke="#2e6f9e" stroke-width="1.6"/>
+        <rect x="154" y="92" width="20" height="20" rx="4" fill="#ffffff" stroke="#2e6f9e" stroke-width="1.6"/>
+        <text x="160" y="140" text-anchor="middle" font-size="12.5" font-weight="600" fill="#3a3833">再現性</text>
+        <rect x="204" y="66" width="60" height="92" rx="10" fill="#e9f3e9" stroke="#6aa96e" stroke-width="1.5"/>
+        <circle cx="234" cy="96" r="10" stroke="#3d7a42" stroke-width="2" fill="#ffffff"/>
+        <path d="M234 82 L234 76 M234 110 L234 116 M220 96 L214 96 M248 96 L254 96" stroke="#3d7a42" stroke-width="2" stroke-linecap="round"/>
+        <text x="234" y="140" text-anchor="middle" font-size="12.5" font-weight="600" fill="#3a3833">自動化</text>
+        <rect x="40" y="168" width="240" height="30" rx="10" fill="#5f5b52"/>
+        <text x="160" y="188" text-anchor="middle" font-size="12" font-weight="600" fill="#ffffff">AIという相棒</text>
+      </svg>
+      <div class="zukai-soe">3本そろうから、初心者でも成り立ちます</div>
+    </div>
+
+    <div class="tsuyomi">
+      <div class="tsuyomi-fuda">
+        <div class="tsuyomi-ban">1</div>
+        <div>
+          <h3>賢い</h3>
+          <p>
+            文章も、画像も、プログラミングも。<br>
+            24時間はたらく、たのもしい相棒です。
+          </p>
+        </div>
+      </div>
+      <div class="tsuyomi-fuda">
+        <div class="tsuyomi-ban">2</div>
+        <div>
+          <h3>再現性がある</h3>
+          <p>
+            センスや経験より、手順。<br>
+            同じ手順なら、初心者でも<br>
+            近い品質を再現できます。
+          </p>
+        </div>
+      </div>
+      <div class="tsuyomi-fuda">
+        <div class="tsuyomi-ban">3</div>
+        <div>
+          <h3>自動化できる</h3>
+          <p>
+            一度仕組みを作れば、<br>
+            あなたが眠っている間も<br>
+            回りつづけます。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 第2章 -->
+  <div class="shou iro-sora">
+    <div class="mayu">第2章</div>
+    <h2 class="marugo">時間を売らずに、柱を立てる</h2>
+    <p>
+      これまでの副業は、時間の切り売り。<br>
+      AI副業は、<span class="tsuyome">小さな仕組みを積み上げる</span><br>
+      働き方です。
+    </p>
+
+    <!-- 図解D: 比較図 -->
+    <div class="zukai">
+      <div class="zukai-dai">これまでの副業との違い</div>
+      <svg viewBox="0 0 320 196" fill="none" role="img" aria-label="時間を売る副業は頭打ち、AI副業は積み上げ型になる比較図">
+        <rect x="10" y="12" width="145" height="152" rx="14" fill="#ffffff" stroke="#efe9dc" stroke-width="1.5"/>
+        <text x="82" y="38" text-anchor="middle" font-size="12" fill="#5f5b52">これまでの副業</text>
+        <line x1="30" y1="140" x2="140" y2="140" stroke="#d8d2c4" stroke-width="1.5"/>
+        <line x1="30" y1="140" x2="30" y2="56" stroke="#d8d2c4" stroke-width="1.5"/>
+        <polyline points="30,130 58,106 88,96 116,93 138,92" stroke="#8a857a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="110" y="80" text-anchor="middle" font-size="11.5" fill="#6e6a60">頭打ち</text>
+        <text x="82" y="158" text-anchor="middle" font-size="11.5" fill="#5f5b52">時間を売る</text>
+        <rect x="165" y="12" width="145" height="152" rx="14" fill="#e7f1f7" stroke="#5b9fc9" stroke-width="1.5"/>
+        <text x="237" y="38" text-anchor="middle" font-size="12" font-weight="600" fill="#2e6f9e">AIの副業</text>
+        <rect x="182" y="126" width="24" height="13" rx="3" fill="#f2b64b" stroke="#8a5f0e"/>
+        <rect x="214" y="126" width="24" height="13" rx="3" fill="#ef8a5a" stroke="#a84a1c"/>
+        <rect x="214" y="111" width="24" height="13" rx="3" fill="#f2b64b" stroke="#8a5f0e"/>
+        <rect x="246" y="126" width="24" height="13" rx="3" fill="#6aa96e" stroke="#3d7a42"/>
+        <rect x="246" y="111" width="24" height="13" rx="3" fill="#ef8a5a" stroke="#a84a1c"/>
+        <rect x="246" y="96" width="24" height="13" rx="3" fill="#f2b64b" stroke="#8a5f0e"/>
+        <path d="M184 108 C 212 98, 240 84, 266 72" stroke="#2e6f9e" stroke-width="2" stroke-linecap="round"/>
+        <path d="M258 70 L268 71 L262 79" stroke="#2e6f9e" stroke-width="2" stroke-linecap="round" fill="none"/>
+        <text x="237" y="158" text-anchor="middle" font-size="11.5" font-weight="600" fill="#2e6f9e">仕組みを積む</text>
+        <text x="160" y="188" text-anchor="middle" font-size="12" fill="#5f5b52">時間の切り売りから、積み上げ型へ</text>
+      </svg>
+    </div>
+
+    <p class="kotoba">
+      大切なのは、<br>
+      いきなり大きく稼ぐことではなく、<br>
+      再現性のある小さな成功を、<br>
+      最短で1回つくること。<br>
+      それが<span class="shirushi">“0→1”</span>です。
+    </p>
+  </div>
+
+  <!-- ノウハウ① -->
+  <div class="shou iro-sango">
+    <div class="mayu">ノウハウ その1</div>
+    <h2 class="marugo">AI画像づくりで、最初の1円を</h2>
+    <p>
+      最初の壁は、金額ではなく<br>
+      <span class="tsuyome">“売れた”という事実づくり</span>。<br>
+      300円の画像販売が、その近道です。
+    </p>
+
+    <!-- 図解E: 4ステップ -->
+    <div class="zukai">
+      <div class="zukai-dai">やることは、この4つだけ</div>
+      <div class="tejun">
+        <div class="tejun-koma">
+          <span class="tejun-ban">その1</span>
+          <svg width="38" height="38" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+            <rect x="8" y="9" width="28" height="25" rx="5" stroke="#a84a1c" stroke-width="1.8" fill="#ffffff"/>
+            <circle cx="17" cy="17" r="3" fill="#f2b64b"/>
+            <polyline points="11,30 19,22 25,27 33,19" stroke="#a84a1c" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h4>商用OKのAIで<br>画像をつくる</h4>
+        </div>
+        <div class="tejun-koma">
+          <span class="tejun-ban">その2</span>
+          <svg width="38" height="38" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+            <rect x="10" y="16" width="18" height="18" rx="4" fill="#fdeee4" stroke="#a84a1c" stroke-width="1.5"/>
+            <rect x="15" y="11" width="18" height="18" rx="4" fill="#ffffff" stroke="#a84a1c" stroke-width="1.5"/>
+            <rect x="20" y="6" width="18" height="18" rx="4" fill="#ffffff" stroke="#a84a1c" stroke-width="1.8"/>
+          </svg>
+          <h4>テーマを絞って<br>セットにする</h4>
+        </div>
+        <div class="tejun-koma">
+          <span class="tejun-ban">その3</span>
+          <svg width="38" height="38" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+            <path d="M12 21 L24 9 L35 9 L35 20 L23 32 Z" fill="#ffffff" stroke="#a84a1c" stroke-width="1.8" stroke-linejoin="round"/>
+            <circle cx="30" cy="14" r="2.5" fill="#f2b64b" stroke="#a84a1c" stroke-width="1.2"/>
+          </svg>
+          <h4>BOOTHやnoteに<br>出品する</h4>
+        </div>
+        <div class="tejun-koma">
+          <span class="tejun-ban">その4</span>
+          <svg width="38" height="38" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+            <rect x="8" y="10" width="28" height="20" rx="7" stroke="#a84a1c" stroke-width="1.8" fill="#ffffff"/>
+            <path d="M18 30 L16 37 L24 30" fill="#ffffff" stroke="#a84a1c" stroke-width="1.8" stroke-linejoin="round"/>
+            <circle cx="17" cy="20" r="1.8" fill="#ef8a5a"/>
+            <circle cx="22" cy="20" r="1.8" fill="#ef8a5a"/>
+            <circle cx="27" cy="20" r="1.8" fill="#ef8a5a"/>
+          </svg>
+          <h4>SNSで<br>そっと紹介する</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- 図解F: 300円の積み上げ -->
+    <div class="zukai">
+      <div class="zukai-dai">300円の積み上げ構造</div>
+      <svg viewBox="0 0 320 206" fill="none" role="img" aria-label="300円が10件で月3000円になる積み上げ図">
+        <text x="160" y="26" text-anchor="middle" font-size="14" font-weight="600" fill="#3a3833">300円 × 10件 ＝ 月3,000円</text>
+        <ellipse cx="70" cy="148" rx="26" ry="7" fill="#ef8a5a" stroke="#a84a1c"/>
+        <ellipse cx="160" cy="148" rx="26" ry="7" fill="#ef8a5a" stroke="#a84a1c"/>
+        <ellipse cx="160" cy="139" rx="26" ry="7" fill="#ef8a5a" stroke="#a84a1c"/>
+        <ellipse cx="160" cy="130" rx="26" ry="7" fill="#ef8a5a" stroke="#a84a1c"/>
+        <ellipse cx="160" cy="121" rx="26" ry="7" fill="#ef8a5a" stroke="#a84a1c"/>
+        <ellipse cx="160" cy="112" rx="26" ry="7" fill="#ef8a5a" stroke="#a84a1c"/>
+        <ellipse cx="250" cy="148" rx="26" ry="7" fill="#ef8a5a" stroke="#a84a1c"/>
+        <ellipse cx="250" cy="139" rx="26" ry="7" fill="#ef8a5a" stroke="#a84a1c"/>
+        <ellipse cx="250" cy="130" rx="26" ry="7" fill="#ef8a5a" stroke="#a84a1c"/>
+        <ellipse cx="250" cy="121" rx="26" ry="7" fill="#ef8a5a" stroke="#a84a1c"/>
+        <ellipse cx="250" cy="112" rx="26" ry="7" fill="#ef8a5a" stroke="#a84a1c"/>
+        <ellipse cx="250" cy="103" rx="26" ry="7" fill="#ef8a5a" stroke="#a84a1c"/>
+        <ellipse cx="250" cy="94" rx="26" ry="7" fill="#ef8a5a" stroke="#a84a1c"/>
+        <ellipse cx="250" cy="85" rx="26" ry="7" fill="#ef8a5a" stroke="#a84a1c"/>
+        <ellipse cx="250" cy="76" rx="26" ry="7" fill="#ef8a5a" stroke="#a84a1c"/>
+        <ellipse cx="250" cy="67" rx="26" ry="7" fill="#ef8a5a" stroke="#a84a1c"/>
+        <text x="70" y="174" text-anchor="middle" font-size="12" fill="#3a3833">1件</text>
+        <text x="160" y="174" text-anchor="middle" font-size="12" fill="#3a3833">5件</text>
+        <text x="250" y="174" text-anchor="middle" font-size="12" fill="#3a3833">10件</text>
+        <text x="70" y="192" text-anchor="middle" font-size="11.5" font-weight="600" fill="#a84a1c">300円</text>
+        <text x="160" y="192" text-anchor="middle" font-size="11.5" font-weight="600" fill="#a84a1c">1,500円</text>
+        <text x="250" y="192" text-anchor="middle" font-size="11.5" font-weight="600" fill="#a84a1c">3,000円</text>
+      </svg>
+      <div class="zukai-soe">金額よりも、“売れた”という事実が財産になります</div>
+    </div>
+
+    <div class="basho">
+      <div class="basho-gyo">
+        <div class="basho-na">BOOTH<span class="fuda">おすすめ</span></div>
+        <p>
+          デジタル作品の販売が公式に認められた場所。<br>
+          アイコンや壁紙など、300円前後の<br>
+          AI画像素材が数多く売られています<br>
+          （2026年7月時点）。
+        </p>
+      </div>
+      <div class="basho-gyo">
+        <div class="basho-na">note</div>
+        <p>
+          「画像＋作り方の解説」を有料記事にして販売。<br>
+          100円から値段をつけられます。
+        </p>
+      </div>
+    </div>
+
+    <!-- 図解G: 架空例① -->
+    <div class="rei">
+      <div class="rei-obi">たとえば：会社員Aさん（架空）のばあい</div>
+      <div class="rei-naka">
+        <svg viewBox="0 0 320 258" fill="none" role="img" aria-label="会社員Aさんが土曜2時間の画像づくりから2週間で900円を達成する架空のタイムライン">
+          <line x1="34" y1="24" x2="34" y2="234" stroke="#ef8a5a" stroke-width="2" stroke-dasharray="2 6"/>
+          <circle cx="34" cy="34" r="7" fill="#ffffff" stroke="#ef8a5a" stroke-width="2.5"/>
+          <rect x="56" y="12" width="252" height="44" rx="12" fill="#fdeee4" stroke="#ef8a5a" stroke-width="1.2"/>
+          <text x="70" y="30" font-size="11.5" font-weight="600" fill="#a84a1c">土曜の午後・2時間</text>
+          <text x="70" y="47" font-size="11.5" fill="#3a3833">猫のアイコン素材を12枚つくる</text>
+          <circle cx="34" cy="98" r="7" fill="#ffffff" stroke="#ef8a5a" stroke-width="2.5"/>
+          <rect x="56" y="76" width="252" height="44" rx="12" fill="#ffffff" stroke="#efe9dc" stroke-width="1.5"/>
+          <text x="70" y="94" font-size="11.5" font-weight="600" fill="#a84a1c">その日のうちに</text>
+          <text x="70" y="111" font-size="11.5" fill="#3a3833">3枚セット×4点をBOOTHに300円で出品</text>
+          <circle cx="34" cy="162" r="7" fill="#ffffff" stroke="#ef8a5a" stroke-width="2.5"/>
+          <rect x="56" y="140" width="252" height="44" rx="12" fill="#ffffff" stroke="#efe9dc" stroke-width="1.5"/>
+          <text x="70" y="158" font-size="11.5" font-weight="600" fill="#a84a1c">2週間後</text>
+          <text x="70" y="175" font-size="11.5" fill="#3a3833">3件うれる（SNSでそっと紹介）</text>
+          <circle cx="34" cy="226" r="7" fill="#a84a1c" stroke="#a84a1c" stroke-width="2.5"/>
+          <rect x="56" y="204" width="252" height="44" rx="12" fill="#a84a1c"/>
+          <text x="70" y="222" font-size="11.5" font-weight="600" fill="#ffffff">合計900円</text>
+          <text x="70" y="239" font-size="11.5" fill="#ffffff">“売れた”という事実＝0→1達成</text>
+        </svg>
+      </div>
+      <div class="rei-chu">※架空の参考例です。<br>成果を保証するものではありません。</div>
+    </div>
+
+    <div class="kokoroe">
+      <h3>守ってほしい、3つのルール</h3>
+      <ul>
+        <li>商用利用OKのAIツールで作る<br>（各ツールの規約を確認）</li>
+        <li>実在の人物、キャラクター、<br>ロゴは扱わない</li>
+        <li>フリマアプリ（メルカリなど）に、<br>画像データは出品しない<br>（規約で禁止。販売はデジタル販売が<br>認められた場所で）</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ノウハウ② -->
+  <div class="shou iro-sora">
+    <div class="mayu">ノウハウ その2</div>
+    <h2 class="marugo">プロンプト1つで、<br>Webページがつくれる</h2>
+    <p>
+      コーディングと聞くと難しそうですが、<br>
+      やることは<span class="tsuyome">“日本語でお願いする”だけ</span>です。
+    </p>
+
+    <!-- 図解H: 変換の流れ -->
+    <div class="zukai">
+      <div class="zukai-dai">お願い文が、ページに変わる</div>
+      <svg viewBox="0 0 320 182" fill="none" role="img" aria-label="日本語のお願い文がClaude CodeでWebページになる流れ図">
+        <rect x="14" y="34" width="112" height="108" rx="12" fill="#ffffff" stroke="#efe9dc" stroke-width="1.5"/>
+        <rect x="27" y="50" width="86" height="4" rx="2" fill="#d8d2c4"/>
+        <rect x="27" y="64" width="66" height="4" rx="2" fill="#d8d2c4"/>
+        <rect x="27" y="78" width="86" height="4" rx="2" fill="#d8d2c4"/>
+        <rect x="27" y="92" width="56" height="4" rx="2" fill="#d8d2c4"/>
+        <rect x="27" y="106" width="74" height="4" rx="2" fill="#d8d2c4"/>
+        <rect x="126" y="60" width="80" height="26" rx="13" fill="#2e6f9e"/>
+        <text x="166" y="77" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">Claude Code</text>
+        <path d="M136 100 L192 100" stroke="#2e6f9e" stroke-width="2" stroke-linecap="round"/>
+        <path d="M185 94 L194 100 L185 106" stroke="#2e6f9e" stroke-width="2" stroke-linecap="round" fill="none"/>
+        <rect x="224" y="22" width="74" height="136" rx="14" fill="#ffffff" stroke="#3a3833" stroke-width="1.8"/>
+        <rect x="232" y="32" width="58" height="15" rx="4" fill="#5b9fc9"/>
+        <rect x="232" y="51" width="58" height="27" rx="4" fill="#e7f1f7"/>
+        <rect x="232" y="84" width="58" height="8" rx="3" fill="#fdf3dd"/>
+        <rect x="232" y="96" width="58" height="8" rx="3" fill="#fdf3dd"/>
+        <rect x="240" y="112" width="42" height="12" rx="6" fill="#ef8a5a"/>
+        <line x1="250" y1="148" x2="272" y2="148" stroke="#d8d2c4" stroke-width="2.5" stroke-linecap="round"/>
+        <text x="70" y="166" text-anchor="middle" font-size="11.5" fill="#5f5b52">日本語で、お願いを書く</text>
+        <text x="261" y="176" text-anchor="middle" font-size="11.5" fill="#5f5b52">Webページが完成</text>
+      </svg>
+    </div>
+
+    <div class="purompt">
+      <div class="purompt-obi">
+        <span class="na">コピペで使えるお願い文</span>
+        <span class="hinto">長押しでコピー</span>
+      </div>
+      <p class="purompt-text">
+        あなたは一流のWebデザイナーです。<br>
+        〔カフェ〕のホームページを、<br>
+        1つのHTMLファイルで作ってください。<br>
+        ・スマホで見やすいデザイン<br>
+        ・「こだわり」「メニュー」<br>
+        　「お店の場所」の3つの内容<br>
+        ・落ち着いたベージュとブラウンの配色<br>
+        ・営業時間は10:00〜19:00、水曜定休
+      </p>
+    </div>
+    <p class="purompt-soe">
+      〔カフェ〕を美容室やパン屋に変えるだけで、<br>
+      そのまま使えます。<br>
+      できたものを見て「ここだけ直して」と<br>
+      追加でお願いするのがコツ。
+    </p>
+
+    <p>
+      実際に、コードの知識ゼロの人が<br>
+      30分〜1時間でページを完成させた例も<br>
+      公開されています（2026年7月時点の調査）。
+    </p>
+    <p>
+      まずは無料のClaude.aiでお試しを。<br>
+      本格的につくるなら、有料プラン<br>
+      （月3,000円ほど・2026年7月時点）です。
+    </p>
+
+    <div class="souba">
+      <div class="souba-gyo">
+        <div class="souba-ue">
+          <span class="souba-na">かんたんな紹介ページ（1枚もの）</span>
+          <span class="souba-kingaku">1〜5万円</span>
+        </div>
+        <div class="souba-shita"><div class="souba-bou" style="width:42%"></div></div>
+      </div>
+      <div class="souba-gyo">
+        <div class="souba-ue">
+          <span class="souba-na">標準的な販売ページ</span>
+          <span class="souba-kingaku">5〜10万円</span>
+        </div>
+        <div class="souba-shita"><div class="souba-bou" style="width:84%"></div></div>
+      </div>
+      <div class="souba-chu">クラウドソーシングでの外注相場（2026年7月調べ）</div>
+    </div>
+
+    <!-- 図解J: 架空例② -->
+    <div class="rei">
+      <div class="rei-obi">たとえば：こんな流れ（架空の例）</div>
+      <div class="rei-naka">
+        <svg viewBox="0 0 320 302" fill="none" role="img" aria-label="行きつけの美容室にページを提案し、試作を見せて、直しを重ねて2週間で完成し、お礼に3万円をもらう架空の流れ図">
+          <text x="20" y="22" font-size="11" fill="#5f5b52">あなた</text>
+          <path d="M32 30 L248 30 Q260 30 260 42 L260 56 Q260 68 248 68 L52 68 L36 82 L40 68 Q20 68 20 56 L20 42 Q20 30 32 30 Z" fill="#e7f1f7" stroke="#5b9fc9" stroke-width="1.2"/>
+          <text x="36" y="54" font-size="11.5" fill="#3a3833">「お店のページ、作りましょうか？」</text>
+          <rect x="48" y="96" width="224" height="34" rx="17" fill="#ffffff" stroke="#5b9fc9" stroke-width="1.5"/>
+          <circle cx="70" cy="113" r="7" stroke="#2e6f9e" stroke-width="1.6" fill="none"/>
+          <path d="M70 109 L70 113 L73 115" stroke="#2e6f9e" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+          <text x="86" y="118" font-size="11.5" fill="#3a3833">Claude Codeで試作 約1時間</text>
+          <text x="300" y="152" text-anchor="end" font-size="11" fill="#5f5b52">美容室のオーナー</text>
+          <path d="M100 160 L288 160 Q300 160 300 172 L300 186 Q300 198 288 198 L284 198 L288 212 L272 198 L100 198 Q88 198 88 186 L88 172 Q88 160 100 160 Z" fill="#fdeee4" stroke="#ef8a5a" stroke-width="1.2"/>
+          <text x="104" y="184" font-size="11.5" fill="#3a3833">「すてき！ぜひお願いします」</text>
+          <rect x="48" y="222" width="224" height="34" rx="17" fill="#ffffff" stroke="#5b9fc9" stroke-width="1.5"/>
+          <text x="160" y="244" text-anchor="middle" font-size="11.5" fill="#3a3833">直しを重ねて、2週間で完成</text>
+          <rect x="70" y="268" width="180" height="28" rx="14" fill="#2e6f9e"/>
+          <text x="160" y="286" text-anchor="middle" font-size="12" font-weight="600" fill="#ffffff">完成のお礼に 3万円</text>
+        </svg>
+      </div>
+      <div class="rei-chu">※架空の参考例です。<br>金額は外注相場（1〜5万円）を参考にした設定で、<br>実際には修正対応などの時間もかかります。</div>
+    </div>
+  </div>
+
+  <!-- ノウハウ③ -->
+  <div class="shou iro-wakaba">
+    <div class="mayu">ノウハウ その3</div>
+    <h2 class="marugo">AIと二人三脚で、<br>SNSを資産に変える</h2>
+    <p>
+      台本も、分析も、改善案も。<br>
+      “センスの世界”だったSNSを、<br>
+      AIが<span class="tsuyome">手順</span>に変えてくれます。
+    </p>
+
+    <!-- 図解K: 改善の輪 -->
+    <div class="zukai">
+      <div class="zukai-dai">ぐるぐる回る、改善の輪</div>
+      <svg viewBox="0 0 320 300" fill="none" role="img" aria-label="AIとあなたで回す改善の循環図">
+        <circle cx="160" cy="152" r="100" stroke="#d8d2c4" stroke-width="1.5" stroke-dasharray="3 6"/>
+        <g transform="translate(219,71) rotate(36)"><path d="M-4 -5 L6 0 L-4 5 Z" fill="#35693a"/></g>
+        <g transform="translate(255,183) rotate(108)"><path d="M-4 -5 L6 0 L-4 5 Z" fill="#35693a"/></g>
+        <g transform="translate(160,252) rotate(180)"><path d="M-4 -5 L6 0 L-4 5 Z" fill="#35693a"/></g>
+        <g transform="translate(65,183) rotate(252)"><path d="M-4 -5 L6 0 L-4 5 Z" fill="#35693a"/></g>
+        <g transform="translate(101,71) rotate(324)"><path d="M-4 -5 L6 0 L-4 5 Z" fill="#35693a"/></g>
+        <rect x="110" y="38" width="100" height="28" rx="14" fill="#e9f3e9" stroke="#6aa96e" stroke-width="1.5"/>
+        <text x="160" y="56" text-anchor="middle" font-size="11.5" fill="#3a3833">台本をつくる</text>
+        <rect x="210" y="107" width="92" height="28" rx="14" fill="#e9f3e9" stroke="#6aa96e" stroke-width="1.5"/>
+        <text x="256" y="125" text-anchor="middle" font-size="11.5" fill="#3a3833">動画にする</text>
+        <rect x="176" y="219" width="86" height="28" rx="14" fill="#fdeee4" stroke="#ef8a5a" stroke-width="1.5"/>
+        <text x="219" y="237" text-anchor="middle" font-size="11.5" fill="#3a3833">投稿する</text>
+        <rect x="54" y="219" width="94" height="28" rx="14" fill="#fdeee4" stroke="#ef8a5a" stroke-width="1.5"/>
+        <text x="101" y="237" text-anchor="middle" font-size="11.5" fill="#3a3833">数字を渡す</text>
+        <rect x="12" y="107" width="104" height="28" rx="14" fill="#e9f3e9" stroke="#6aa96e" stroke-width="1.5"/>
+        <text x="64" y="125" text-anchor="middle" font-size="11.5" fill="#3a3833">改善案をもらう</text>
+        <text x="160" y="147" text-anchor="middle" font-size="14" font-weight="600" fill="#3a3833" font-family="Hiragino Maru Gothic ProN, Hiragino Kaku Gothic ProN, sans-serif">あなたは</text>
+        <text x="160" y="169" text-anchor="middle" font-size="14" font-weight="600" fill="#3a3833" font-family="Hiragino Maru Gothic ProN, Hiragino Kaku Gothic ProN, sans-serif">決めるだけ</text>
+      </svg>
+      <div class="hanrei">
+        <span class="ai-gawa">緑 ＝ AIがやってくれる</span>
+        <span class="hito-gawa">オレンジ ＝ あなたの作業</span>
+      </div>
+    </div>
+
+    <p>
+      台本はChatGPTやClaudeに。<br>
+      動画はCapCutやVrewが、<br>
+      字幕付けまで自動でやってくれます。
+    </p>
+
+    <div class="purompt">
+      <div class="purompt-obi">
+        <span class="na">分析をお願いする文例</span>
+        <span class="hinto">長押しでコピー</span>
+      </div>
+      <p class="purompt-text">
+        今週の投稿データです。<br>
+        再生数と保存率から、伸びた理由と、<br>
+        来週の改善点を3つ教えてください。<br>
+        〔ここに数字を貼り付け〕
+      </p>
+    </div>
+    <p class="purompt-soe">
+      数字を貼るだけで、AIが“次の一手”を教えてくれます。
+    </p>
+
+    <div class="nedan">
+      <span><b>100円〜</b>noteの最低価格</span>
+      <span><b>980〜1,800円</b>よく売れている価格帯</span>
+    </div>
+    <div class="souba-chu">noteの公開情報による目安（2026年7月時点）</div>
+
+    <!-- 図解M: 架空例③ -->
+    <div class="rei">
+      <div class="rei-obi">たとえば：3ヶ月の育てかた（架空）</div>
+      <div class="rei-naka">
+        <svg viewBox="0 0 320 236" fill="none" role="img" aria-label="3ヶ月かけてSNSを育て、noteの有料記事で月9,800円に届く架空の成長カーブ">
+          <line x1="20" y1="164" x2="304" y2="164" stroke="#d8d2c4" stroke-width="1.5"/>
+          <path d="M30 156 Q100 150 150 132 T296 56" stroke="#3d7a42" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <circle cx="62" cy="151" r="6" fill="#ffffff" stroke="#3d7a42" stroke-width="2.5"/>
+          <circle cx="160" cy="128" r="6" fill="#ffffff" stroke="#3d7a42" stroke-width="2.5"/>
+          <circle cx="258" cy="78" r="6" fill="#35693a" stroke="#3d7a42" stroke-width="2.5"/>
+          <rect x="154" y="30" width="150" height="30" rx="15" fill="#35693a"/>
+          <text x="229" y="49" text-anchor="middle" font-size="11.5" font-weight="600" fill="#ffffff">980円×10部＝9,800円</text>
+          <rect x="16" y="176" width="92" height="48" rx="10" fill="#e9f3e9" stroke="#6aa96e" stroke-width="1.2"/>
+          <text x="62" y="195" text-anchor="middle" font-size="11" font-weight="600" fill="#35693a">1ヶ月目</text>
+          <text x="62" y="211" text-anchor="middle" font-size="11" fill="#3a3833">仕組みづくり</text>
+          <rect x="114" y="176" width="92" height="48" rx="10" fill="#e9f3e9" stroke="#6aa96e" stroke-width="1.2"/>
+          <text x="160" y="195" text-anchor="middle" font-size="11" font-weight="600" fill="#35693a">2ヶ月目</text>
+          <text x="160" y="211" text-anchor="middle" font-size="11" fill="#3a3833">AIと数字で改善</text>
+          <rect x="212" y="176" width="92" height="48" rx="10" fill="#e9f3e9" stroke="#6aa96e" stroke-width="1.2"/>
+          <text x="258" y="195" text-anchor="middle" font-size="11" font-weight="600" fill="#35693a">3ヶ月目</text>
+          <text x="258" y="211" text-anchor="middle" font-size="11" fill="#3a3833">noteで販売開始</text>
+        </svg>
+      </div>
+      <div class="rei-chu">※架空のシミュレーションです。<br>成果を保証するものではありません。</div>
+    </div>
+
+    <div class="shoujiki">
+      <h3>正直に、お伝えします</h3>
+      <p>
+        最初の1ヶ月は“仕組みづくり”の期間。<br>
+        収益の柱になるまで、<br>
+        数ヶ月かけて育てるのが現実的です。<br>
+        だからこそ、先にノウハウその1で<br>
+        “最初の1円”を確保しておくのです。
+      </p>
+    </div>
+  </div>
+
+  <!-- まとめ -->
+  <div class="shou">
+    <div class="mayu">まとめ</div>
+    <h2 class="marugo">あなたの0→1、はじめの三歩</h2>
+
+    <!-- 図解N: ロードマップ -->
+    <div class="zukai">
+      <div class="zukai-dai">この階段を、一段ずつ</div>
+      <svg viewBox="0 0 320 226" fill="none" role="img" aria-label="画像販売、Web制作、SNSとnoteの3段の階段を一段ずつのぼるロードマップ図">
+        <path d="M40 136 C 100 112, 190 72, 276 44" stroke="#8a5f0e" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 6"/>
+        <path d="M268 40 L278 43 L272 52" stroke="#8a5f0e" stroke-width="2" stroke-linecap="round" fill="none"/>
+        <rect x="20" y="148" width="90" height="50" rx="10" fill="#fdeee4" stroke="#ef8a5a" stroke-width="1.5"/>
+        <text x="65" y="142" text-anchor="middle" font-size="11.5" font-weight="600" fill="#a84a1c">一歩目</text>
+        <text x="65" y="170" text-anchor="middle" font-size="11" fill="#3a3833">画像販売で</text>
+        <text x="65" y="186" text-anchor="middle" font-size="11" fill="#3a3833">最初の1円</text>
+        <rect x="115" y="108" width="90" height="90" rx="10" fill="#e7f1f7" stroke="#5b9fc9" stroke-width="1.5"/>
+        <text x="160" y="102" text-anchor="middle" font-size="11.5" font-weight="600" fill="#2e6f9e">二歩目</text>
+        <text x="160" y="146" text-anchor="middle" font-size="11" fill="#3a3833">Web制作で</text>
+        <text x="160" y="162" text-anchor="middle" font-size="11" fill="#3a3833">単価を上げる</text>
+        <rect x="210" y="68" width="90" height="130" rx="10" fill="#35693a"/>
+        <text x="255" y="62" text-anchor="middle" font-size="11.5" font-weight="600" fill="#35693a">三歩目</text>
+        <text x="255" y="126" text-anchor="middle" font-size="11" fill="#ffffff">SNS×noteで</text>
+        <text x="255" y="142" text-anchor="middle" font-size="11" fill="#ffffff">資産型の柱に</text>
+        <line x1="10" y1="198" x2="310" y2="198" stroke="#efe9dc" stroke-width="1.5"/>
+        <text x="160" y="220" text-anchor="middle" font-size="11.5" fill="#6e6a60">焦らなくて大丈夫。一段ずつで、ちゃんと届く</text>
+      </svg>
+    </div>
+
+    <p class="kotoba">
+      順番どおりで、大丈夫。<br>
+      小さな<span class="shirushi">1</span>が、すべてを変えます。
+    </p>
+  </div>
+
+  <!-- しめくくり（CTA） -->
+  <div class="musubi">
+    <svg width="280" height="56" viewBox="0 0 320 60" fill="none" aria-hidden="true">
+      <circle cx="46" cy="34" r="4" fill="#ef8a5a"/>
+      <rect x="86" y="18" width="8" height="8" rx="2" fill="#f2b64b" transform="rotate(18 90 22)"/>
+      <circle cx="132" cy="42" r="3" fill="#6aa96e"/>
+      <path d="M160 16 L166 26 L154 26 Z" fill="#5b9fc9"/>
+      <circle cx="196" cy="30" r="4" fill="#f2b64b"/>
+      <rect x="228" y="34" width="8" height="8" rx="2" fill="#ef8a5a" transform="rotate(-14 232 38)"/>
+      <circle cx="268" cy="22" r="3" fill="#5b9fc9"/>
+      <path d="M288 38 L294 48 L282 48 Z" fill="#6aa96e"/>
+    </svg>
+    <h2>最初の1円を、いっしょに。🎉</h2>
+    <p>
+      ここまで読んだあなたは、<br>
+      もう“調べるだけの人”ではありません。<br>
+      仲間と進める場所を用意しました。<br>
+      “最初の1円”の報告、待っています。
+    </p>
+    <a class="musubi-botan" href="https://line.me/ti/g2/OEh5ax_Ksj_cxm4fwzmp6VZYpzZOjhpVTDGVdQ?utm_source=invitation&amp;utm_medium=link_copy&amp;utm_campaign=default">
+      AI×SNS 0→1達成コミュニティに<br>参加する（無料）
+    </a>
+    <p class="musubi-shita">参加は無料です。<br>合わないと感じたら、いつでも退出できます。</p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="shirushi">超初心者のための AI副業 0→1講座</div>
+  <p>
+    本資料は情報提供を目的としたものであり、<br>
+    特定の成果や収益を保証するものではありません。<br>
+    掲載している“たとえば話”は、<br>
+    すべて架空の参考例です。<br>
+    各サービスの規約・価格・手数料は<br>
+    変更される場合があります<br>
+    （2026年7月時点の調査に基づいています）。
+  </p>
+</footer>
+
+</body>
+</html>
