@@ -3,303 +3,331 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="color-scheme" content="only light">
+<meta name="color-scheme" content="only dark">
 <meta name="description" content="特別なスキルも、まとまった時間もいらない。AIという相棒と最初の1円をつくる、超初心者のためのAI副業0→1講座。">
-<title>超初心者のためのAI副業 0→1講座｜無料特典</title>
+<title>【完全保存版】超初心者のためのAI副業 0→1講座｜無料特典</title>
 <style>
   :root{
-    --kurimu:#fffcf5;
-    --shiro:#ffffff;
-    --kokuban:#3a3833;
-    --moji2:#5f5b52;
-    --moji3:#6e6a60;
+    --kuro:#0e0c09;
+    --kuro2:#171310;
+    --kuro-fuda:#1d1811;
+    --zougei:#ece6d9;
+    --zougei2:#cfc7b4;
+    --zougei3:#a89e8a;
+    --kin:#d4b463;
+    --kin-usu:#f7e7a8;
+    --kin-akari:#f0d488;
+    --kin-koi:#b8913a;
+    --kin-moji:#7a5d24;
+    --kin-soft:#f7efdc;
+    --aka:#b3131f;
+    --aka-fukai:#8e1019;
+    --aka-moji:#a51e28;
+    --aka-soft:#fae9e7;
+    --kami:#fffdf8;
+    --sumi:#1c1c1a;
+    --moji2:#514f49;
+    --moji3:#63605a;
     --sen:#efe9dc;
-    --sango:#ef8a5a;      --sango-text:#a84a1c;      --sango-soft:#fdeee4;
-    --sora:#5b9fc9;       --sora-text:#2e6f9e;       --sora-soft:#e7f1f7;
-    --wakaba:#6aa96e;     --wakaba-text:#35693a;     --wakaba-soft:#e9f3e9;
-    --hachimitsu:#f2b64b; --hachimitsu-text:#8a5f0e; --hachimitsu-soft:#fdf3dd;
-    --line-midori:#04803e;
-    --kage:0 1px 2px rgba(58,56,51,.04),0 12px 32px rgba(58,56,51,.07);
+    --kage:0 2px 6px rgba(0,0,0,.35),0 16px 40px rgba(0,0,0,.45);
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html{-webkit-text-size-adjust:100%}
+  html{-webkit-text-size-adjust:100%;background:#0e0c09}
   body{
     font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif;
-    background:var(--kurimu);color:var(--kokuban);
+    background:linear-gradient(180deg,var(--kuro2) 0%,var(--kuro) 26%,var(--kuro) 100%);
+    color:var(--zougei);
     font-size:15px;line-height:1.95;
     -webkit-font-smoothing:antialiased;
     overflow-x:clip;
     padding-bottom:env(safe-area-inset-bottom);
   }
-  .marugo{font-family:"Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN","Hiragino Sans",sans-serif}
+  .marugo{font-weight:700}
   img,svg{max-width:100%;height:auto}
-  a{color:var(--sora-text)}
-  a:focus-visible,button:focus-visible{outline:3px solid var(--hachimitsu);outline-offset:3px}
+  a{color:var(--kin-akari)}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--kin);outline-offset:3px}
   svg text{font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans",sans-serif}
 
-  /* 虹の帯 */
-  .niji{height:6px;background:linear-gradient(90deg,var(--sango),var(--hachimitsu),var(--wakaba),var(--sora))}
+  /* 金の帯 */
+  .niji{height:6px;background:linear-gradient(90deg,#7a5d24,#f7e7a8 30%,#d4b463 55%,#f0d488 78%,#7a5d24)}
 
-  /* 表紙（明るいクリーム地） */
-  .tobira{padding:56px 24px 44px;text-align:center}
+  /* 表紙（黒×金） */
+  .tobira{
+    padding:60px 24px 52px;text-align:center;position:relative;
+    background:
+      radial-gradient(120% 80% at 50% 0%,rgba(212,180,99,.16) 0%,rgba(14,12,9,0) 58%),
+      radial-gradient(90% 50% at 50% 105%,rgba(212,180,99,.08) 0%,rgba(14,12,9,0) 60%);
+  }
   .tobira-uchi{max-width:620px;margin:0 auto}
   .tobira-badge{
-    display:inline-block;background:var(--wakaba-soft);color:var(--wakaba-text);
-    font-size:13px;font-weight:600;letter-spacing:.06em;
-    border:1.5px solid var(--wakaba);border-radius:999px;padding:6px 18px;
-    margin-bottom:18px;
-    font-family:"Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN",sans-serif;
+    display:inline-block;
+    background:linear-gradient(180deg,#c81a27,#8e1019);
+    color:#fff;font-size:13px;font-weight:700;letter-spacing:.24em;
+    padding:8px 30px 8px 32px;margin-bottom:20px;
+    clip-path:polygon(0 0,100% 0,calc(100% - 9px) 50%,100% 100%,0 100%,9px 50%);
+    text-shadow:0 1px 2px rgba(0,0,0,.35);
   }
   .tobira-mayu{
-    font-size:11.5px;letter-spacing:.3em;color:var(--hachimitsu-text);
+    font-size:12px;letter-spacing:.3em;color:var(--kin-akari);font-weight:600;
     margin-bottom:26px;
   }
   .tobira svg{display:block;margin:0 auto 22px}
   .tobira h1{
-    font-family:"Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN","Hiragino Sans",sans-serif;
-    font-size:28px;font-weight:600;line-height:1.7;letter-spacing:.04em;
+    font-size:30px;font-weight:800;line-height:1.65;letter-spacing:.05em;
     text-wrap:balance;margin-bottom:22px;
+    background:linear-gradient(180deg,#faeec2 0%,#f0d488 30%,#d4b463 52%,#a37d33 72%,#e8cc84 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    filter:drop-shadow(0 3px 16px rgba(212,180,99,.28));
+    animation:kirameki 3.6s ease-in-out infinite;
   }
-  .ji-sango{color:var(--sango-text)}
-  .ji-sora{color:var(--sora-text)}
-  .ji-hachi{color:var(--hachimitsu-text)}
-  .tobira-riido{
-    font-size:14.5px;line-height:2.15;color:var(--moji2);
-    letter-spacing:.02em;
+  @keyframes kirameki{
+    0%,100%{filter:drop-shadow(0 3px 16px rgba(212,180,99,.22)) brightness(1)}
+    50%{filter:drop-shadow(0 3px 20px rgba(212,180,99,.4)) brightness(1.12)}
   }
+  .ji-sango,.ji-sora,.ji-hachi{-webkit-text-fill-color:#fdfbf5;color:#fdfbf5}
+  .tobira-riido{font-size:14.5px;line-height:2.15;color:var(--zougei2);letter-spacing:.02em}
   .tobira-yajirushi{margin-top:34px}
   .tobira-yajirushi svg{margin:0 auto}
 
   /* 本文の器 */
   .hon{max-width:620px;margin:0 auto;padding:0 24px 8px}
 
-  /* 章の反復リズム＋章色テーマ */
-  .shou{margin-top:84px;--iro:var(--hachimitsu-text);--iro-nama:var(--hachimitsu);--iro-soft:var(--hachimitsu-soft)}
-  .shou.iro-sango{--iro:var(--sango-text);--iro-nama:var(--sango);--iro-soft:var(--sango-soft)}
-  .shou.iro-sora{--iro:var(--sora-text);--iro-nama:var(--sora);--iro-soft:var(--sora-soft)}
-  .shou.iro-wakaba{--iro:var(--wakaba-text);--iro-nama:var(--wakaba);--iro-soft:var(--wakaba-soft)}
+  /* 章のリズム＋章色（ダーク上は明色・白カード内は濃色） */
+  .shou{margin-top:88px;
+    --iro:var(--kin-moji);--iro-nama:var(--kin);--iro-soft:var(--kin-soft);--iro-hikari:var(--kin-akari)}
+  .shou.iro-sango{--iro:var(--aka-moji);--iro-nama:#c9463f;--iro-soft:var(--aka-soft);--iro-hikari:#f2a196}
+  .shou.iro-sora,.shou.iro-wakaba{--iro:var(--kin-moji);--iro-nama:var(--kin);--iro-soft:var(--kin-soft);--iro-hikari:var(--kin-akari)}
   .mayu{
-    display:flex;align-items:center;gap:8px;
-    font-size:12px;letter-spacing:.16em;color:var(--iro);font-weight:600;
+    display:flex;align-items:center;gap:9px;
+    font-size:12px;letter-spacing:.2em;color:var(--iro-hikari);font-weight:700;
     margin-bottom:12px;
-    font-family:"Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN",sans-serif;
   }
   .mayu::before{
-    content:"";width:12px;height:12px;border-radius:4px;
-    background:var(--iro-nama);flex-shrink:0;
+    content:"";width:10px;height:10px;
+    background:linear-gradient(135deg,var(--kin-usu),var(--kin-koi));
+    transform:rotate(45deg);border-radius:2px;flex-shrink:0;
   }
+  .shou.iro-sango .mayu::before{background:linear-gradient(135deg,#e2574d,#8e1019)}
   .shou h2{
-    font-family:"Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN","Hiragino Sans",sans-serif;
-    font-size:22px;font-weight:600;line-height:1.65;letter-spacing:.03em;
-    text-wrap:balance;margin-bottom:16px;
+    font-size:23px;font-weight:800;line-height:1.6;letter-spacing:.03em;
+    color:#fdfbf5;text-wrap:balance;margin-bottom:16px;
   }
-  .shou p{color:var(--moji2);margin-bottom:1.3em}
-  .tsuyome{color:var(--kokuban);font-weight:600}
+  .shou p{color:var(--zougei2);margin-bottom:1.3em}
+  .tsuyome{color:var(--kin-akari);font-weight:700}
 
-  /* 図解カード */
+  /* 図解カード（白×金の額装） */
   .zukai{
-    background:var(--shiro);border:1.5px solid var(--sen);border-radius:20px;
+    background:var(--kami);border:1.5px solid var(--kin);border-radius:16px;
     padding:24px 16px 20px;margin:26px 0;box-shadow:var(--kage);
+    position:relative;
+  }
+  .zukai::before{
+    content:"";position:absolute;inset:4px;border:1px solid rgba(212,180,99,.35);
+    border-radius:11px;pointer-events:none;
   }
   .zukai-dai{
-    text-align:center;font-size:12.5px;letter-spacing:.14em;font-weight:600;
+    text-align:center;font-size:12.5px;letter-spacing:.18em;font-weight:700;
     color:var(--iro);margin-bottom:16px;
-    font-family:"Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN",sans-serif;
   }
   .zukai svg{width:100%;display:block}
-  .zukai-soe{
-    text-align:center;font-size:12.5px;color:var(--moji3);
-    line-height:1.85;margin-top:12px;
-  }
+  .zukai-soe{text-align:center;font-size:12.5px;color:var(--moji3);line-height:1.85;margin-top:12px}
 
   /* たとえば話（架空例）カード */
   .rei{
-    background:var(--shiro);border:1.5px solid var(--iro-nama);border-radius:20px;
+    background:var(--kami);border:1.5px solid var(--iro-nama);border-radius:16px;
     padding:0;margin:26px 0;overflow:hidden;box-shadow:var(--kage);
   }
   .rei-obi{
     background:var(--iro-soft);padding:12px 18px;
-    font-size:13px;font-weight:600;color:var(--iro);letter-spacing:.04em;
-    font-family:"Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN",sans-serif;
+    font-size:13px;font-weight:700;color:var(--iro);letter-spacing:.04em;
   }
   .rei-naka{padding:20px 16px 16px}
   .rei svg{width:100%;display:block}
-  .rei-chu{
-    padding:0 18px 16px;font-size:11.5px;color:var(--moji3);line-height:1.8;
-  }
+  .rei-chu{padding:0 18px 16px;font-size:12.5px;color:var(--moji2);line-height:1.8}
 
   /* 強みカード（3枚） */
   .tsuyomi{display:flex;flex-direction:column;gap:12px;margin-top:22px}
   .tsuyomi-fuda{
-    background:var(--shiro);border:1.5px solid var(--sen);border-radius:18px;
-    padding:18px 20px 16px;display:flex;gap:14px;align-items:flex-start;
+    background:var(--kami);border:1.5px solid var(--kin);border-radius:14px;
+    padding:18px 20px 16px;display:flex;gap:14px;align-items:flex-start;box-shadow:var(--kage);
   }
   .tsuyomi-ban{
-    flex-shrink:0;width:32px;height:32px;border-radius:11px;
-    color:#fff;font-size:15px;font-weight:600;
+    flex-shrink:0;width:34px;height:34px;border-radius:10px;
+    background:linear-gradient(160deg,#2a2114,#0e0c09);
+    border:1px solid var(--kin);
+    color:var(--kin-akari);font-size:15px;font-weight:800;
     display:flex;align-items:center;justify-content:center;margin-top:3px;
     font-variant-numeric:tabular-nums;
   }
-  .tsuyomi-fuda:nth-child(1) .tsuyomi-ban{background:var(--sango-text)}
-  .tsuyomi-fuda:nth-child(2) .tsuyomi-ban{background:var(--sora-text)}
-  .tsuyomi-fuda:nth-child(3) .tsuyomi-ban{background:var(--wakaba-text)}
-  .tsuyomi-fuda h3{font-size:15.5px;font-weight:600;margin-bottom:5px;letter-spacing:.03em}
+  .tsuyomi-fuda h3{font-size:15.5px;font-weight:700;margin-bottom:5px;letter-spacing:.03em;color:var(--sumi)}
   .tsuyomi-fuda p{font-size:13.5px;line-height:1.9;color:var(--moji2);margin:0}
 
-  /* ことば（章の締め・丸ゴ） */
+  /* ことば（章の締め） */
   .kotoba{
-    font-family:"Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN",sans-serif;
-    text-align:center;font-size:16px;line-height:2.15;letter-spacing:.04em;
-    color:var(--kokuban);margin:36px 0 0;text-wrap:balance;font-weight:600;
+    text-align:center;font-size:16.5px;line-height:2.15;letter-spacing:.05em;
+    color:var(--zougei);margin:36px 0 0;text-wrap:balance;font-weight:700;
   }
-  .kotoba .shirushi{color:var(--iro)}
+  .kotoba .shirushi{color:var(--kin-akari)}
 
-  /* 手順（2×2） */
+  /* 手順（2×2・白カード内） */
   .tejun{display:grid;grid-template-columns:1fr 1fr;gap:10px}
   .tejun-koma{
-    background:var(--iro-soft);border:1.5px solid var(--iro-nama);border-radius:14px;
+    background:var(--iro-soft);border:1.5px solid var(--iro-nama);border-radius:12px;
     padding:14px 13px 12px;position:relative;
   }
   .tejun-ban{
     position:absolute;top:11px;right:12px;
-    font-size:11px;font-weight:600;color:var(--iro);letter-spacing:.08em;
+    font-size:11px;font-weight:700;color:var(--iro);letter-spacing:.08em;
     font-variant-numeric:tabular-nums;
   }
   .tejun-koma svg{display:block;margin-bottom:8px}
-  .tejun-koma h4{font-size:13px;font-weight:600;line-height:1.6;letter-spacing:.02em}
+  .tejun-koma h4{font-size:13px;font-weight:700;line-height:1.6;letter-spacing:.02em;color:var(--sumi)}
 
   /* 販売先カード */
   .basho{display:flex;flex-direction:column;gap:10px;margin-top:22px}
   .basho-gyo{
-    background:var(--shiro);border:1.5px solid var(--sen);border-radius:16px;
-    padding:16px 20px;
+    background:var(--kami);border:1.5px solid var(--kin);border-radius:14px;
+    padding:16px 20px;box-shadow:var(--kage);
   }
-  .basho-na{
-    font-size:14.5px;font-weight:600;margin-bottom:3px;
-    display:flex;align-items:center;gap:10px;
-  }
+  .basho-na{font-size:14.5px;font-weight:700;margin-bottom:3px;display:flex;align-items:center;gap:10px;color:var(--sumi)}
   .basho-na .fuda{
-    font-size:10.5px;font-weight:600;letter-spacing:.06em;color:var(--sango-text);
-    background:var(--sango-soft);border:1px solid var(--sango);
-    border-radius:999px;padding:2px 10px;
+    font-size:10.5px;font-weight:700;letter-spacing:.06em;color:#fff;
+    background:linear-gradient(180deg,#c81a27,#8e1019);
+    border-radius:999px;padding:2.5px 11px;
   }
   .basho-gyo p{font-size:13px;line-height:1.85;color:var(--moji2);margin:0}
 
-  /* 注意カード */
+  /* 注意カード（白×金・赤見出し） */
   .kokoroe{
-    background:var(--wakaba-soft);border:1.5px solid var(--wakaba);border-radius:18px;
-    padding:22px 20px;margin-top:22px;
+    background:var(--kami);border:1.5px solid var(--kin);border-radius:14px;
+    padding:22px 20px;margin-top:22px;box-shadow:var(--kage);
   }
-  .kokoroe h3{
-    font-size:14px;font-weight:600;letter-spacing:.05em;color:var(--wakaba-text);
-    margin-bottom:12px;
-    font-family:"Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN",sans-serif;
-  }
+  .kokoroe h3{font-size:14px;font-weight:700;letter-spacing:.05em;color:var(--aka-moji);margin-bottom:12px}
   .kokoroe ul{list-style:none}
-  .kokoroe li{
-    font-size:13.5px;line-height:1.9;color:var(--moji2);
-    padding-left:20px;position:relative;margin-bottom:9px;
-  }
+  .kokoroe li{font-size:13.5px;line-height:1.9;color:var(--moji2);padding-left:20px;position:relative;margin-bottom:9px}
   .kokoroe li:last-child{margin-bottom:0}
   .kokoroe li::before{
     content:"";position:absolute;left:2px;top:10px;
-    width:8px;height:8px;border-radius:50%;background:var(--wakaba);
+    width:8px;height:8px;border-radius:50%;background:var(--aka);
   }
 
-  /* コピペ用プロンプト枠（明るい） */
+  /* コピペ用プロンプト枠（黒×金） */
   .purompt{
-    background:var(--shiro);border:2px solid var(--iro-nama);border-radius:16px;
-    overflow:hidden;margin:24px 0 12px;
+    background:var(--kuro-fuda);border:1.5px solid var(--kin);border-radius:14px;
+    overflow:hidden;margin:24px 0 12px;box-shadow:var(--kage);
   }
   .purompt-obi{
     display:flex;justify-content:space-between;align-items:center;gap:8px;
-    padding:11px 16px;background:var(--iro-soft);
+    padding:11px 16px;background:linear-gradient(180deg,#2a2114,#1d1811);
+    border-bottom:1px solid rgba(212,180,99,.4);
   }
-  .purompt-obi .na{
-    font-size:12px;letter-spacing:.1em;color:var(--iro);font-weight:600;
-    font-family:"Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN",sans-serif;
-  }
-  .purompt-obi .hinto{font-size:11.5px;color:var(--moji2);flex-shrink:0}
-  .purompt-text{
-    padding:18px 18px 20px;font-size:13.5px;line-height:2.05;
-    color:var(--kokuban);overflow-x:auto;margin:0;
-  }
-  .purompt-soe{font-size:12.5px;line-height:1.9;color:var(--moji3)}
+  .purompt-obi .na{font-size:12px;letter-spacing:.12em;color:var(--kin-akari);font-weight:700}
+  .purompt-obi .hinto{font-size:11.5px;color:var(--zougei3);flex-shrink:0}
+  .purompt-text{padding:18px 18px 20px;font-size:13.5px;line-height:2.05;color:#f3efe4;overflow-x:auto;margin:0}
+  .purompt-soe{font-size:12.5px;line-height:1.9;color:var(--zougei3)}
 
-  /* 相場の帯グラフ */
-  .souba{margin-top:22px;display:flex;flex-direction:column;gap:13px}
+  /* 相場の帯グラフ（ダーク上・金） */
+  .souba{margin-top:22px;display:flex;flex-direction:column;gap:14px}
   .souba-gyo{display:flex;flex-direction:column;gap:5px}
   .souba-ue{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
-  .souba-na{font-size:13px;color:var(--moji2)}
+  .souba-na{font-size:13px;color:var(--zougei2)}
   .souba-kingaku{
-    font-size:14px;font-weight:600;color:var(--sora-text);
+    font-size:17px;font-weight:800;color:var(--kin-akari);
     font-variant-numeric:tabular-nums;letter-spacing:.02em;flex-shrink:0;
   }
-  .souba-shita{height:12px;background:var(--sen);border-radius:6px;overflow:hidden}
-  .souba-bou{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--sora),var(--sora-text))}
-  .souba-chu{font-size:12.5px;color:var(--moji3);margin-top:2px}
+  .souba-shita{height:12px;background:#2c251a;border-radius:6px;overflow:hidden;border:1px solid #3a3021}
+  .souba-bou{height:100%;border-radius:6px;background:linear-gradient(90deg,#f7e7a8,#d4b463)}
+  .souba-chu{font-size:13px;color:var(--moji2);margin-top:2px}
 
-  /* 凡例チップ */
+  /* 凡例チップ（白カード内） */
   .hanrei{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:14px}
-  .hanrei span{
-    font-size:12px;letter-spacing:.03em;border-radius:999px;padding:4px 14px;font-weight:600;
-  }
-  .hanrei .ai-gawa{background:var(--wakaba-soft);border:1.5px solid var(--wakaba);color:var(--wakaba-text)}
-  .hanrei .hito-gawa{background:var(--sango-soft);border:1.5px solid var(--sango);color:var(--sango-text)}
+  .hanrei span{font-size:12px;letter-spacing:.03em;border-radius:999px;padding:4px 14px;font-weight:700}
+  .hanrei .ai-gawa{background:var(--kin-soft);border:1.5px solid var(--kin);color:var(--kin-moji)}
+  .hanrei .hito-gawa{background:var(--aka-soft);border:1.5px solid #c9463f;color:var(--aka-moji)}
 
-  /* 価格チップ */
+  /* 価格チップ（黒×金） */
   .nedan{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 6px}
   .nedan span{
-    background:var(--shiro);border:1.5px solid var(--sen);border-radius:14px;
-    padding:11px 16px;font-size:12.5px;color:var(--moji2);line-height:1.6;
+    background:var(--kuro-fuda);border:1.5px solid var(--kin);border-radius:12px;
+    padding:12px 18px;font-size:12.5px;color:var(--zougei2);line-height:1.6;
   }
   .nedan b{
-    display:block;font-size:16px;color:var(--wakaba-text);font-weight:600;
+    display:block;font-size:21px;font-weight:800;
+    background:linear-gradient(180deg,#faeec2,#f0d488 40%,#d4b463 70%,#b8913a);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
     font-variant-numeric:tabular-nums;letter-spacing:.02em;
   }
 
-  /* 正直カード */
+  /* 正直カード（白×金） */
   .shoujiki{
-    background:var(--hachimitsu-soft);border:1.5px solid var(--hachimitsu);border-radius:18px;
-    padding:22px 20px;margin-top:22px;
+    background:var(--kami);border:1.5px solid var(--kin);border-radius:14px;
+    padding:22px 20px;margin-top:22px;box-shadow:var(--kage);
   }
-  .shoujiki h3{
-    font-size:14px;font-weight:600;letter-spacing:.05em;color:var(--hachimitsu-text);
-    margin-bottom:10px;
-    font-family:"Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN",sans-serif;
-  }
+  .shoujiki h3{font-size:14px;font-weight:700;letter-spacing:.05em;color:var(--kin-moji);margin-bottom:10px}
   .shoujiki p{font-size:13.5px;line-height:1.95;color:var(--moji2);margin:0}
 
-  /* しめくくり（CTA・明るい） */
+  /* 目次: 金枠番号カード */
+  .mokuji{margin:26px 0}
+  .mokuji-dai{
+    text-align:center;font-size:13px;letter-spacing:.2em;font-weight:700;
+    color:var(--kin-akari);margin-bottom:14px;
+  }
+  .mokuji-retsu{display:flex;flex-direction:column;gap:12px}
+  .mokuji-fuda{
+    display:flex;align-items:stretch;background:var(--kami);
+    border:1.5px solid var(--kin);border-radius:14px;overflow:hidden;box-shadow:var(--kage);
+  }
+  .mokuji-ban{
+    flex-shrink:0;width:66px;display:flex;align-items:center;justify-content:center;
+    font-size:23px;font-weight:800;color:var(--kin-akari);
+    background:linear-gradient(160deg,#2a2114,#0e0c09);
+    border-right:1.5px solid var(--kin);
+    font-variant-numeric:tabular-nums;letter-spacing:.04em;
+  }
+  .mokuji-naka{padding:16px;display:flex;align-items:center}
+  .mokuji-naka h3{font-size:15.5px;font-weight:700;color:var(--sumi);line-height:1.65;letter-spacing:.02em}
+  .mokuji-naka .aka-ji{color:var(--aka-moji)}
+  .mokuji-soe{text-align:center;font-size:12.5px;color:var(--zougei3);margin-top:12px}
+
+  /* しめくくり（CTA・黒×金） */
   .musubi{
-    background:var(--shiro);border:1.5px solid var(--sen);border-radius:24px;
-    padding:8px 26px 36px;margin-top:84px;text-align:center;box-shadow:var(--kage);
+    background:linear-gradient(180deg,#1d1811,#0e0c09);
+    border:2px solid var(--kin);border-radius:20px;
+    padding:0 0 34px;margin-top:88px;text-align:center;
+    box-shadow:0 0 0 1px rgba(212,180,99,.25),0 18px 48px rgba(0,0,0,.5),0 0 40px rgba(212,180,99,.12);
+    overflow:hidden;
+  }
+  .musubi-obi{
+    background:linear-gradient(180deg,#c81a27,#8e1019);color:#fff;
+    font-size:13.5px;font-weight:700;letter-spacing:.12em;
+    padding:11px 16px;margin-bottom:22px;
   }
   .musubi svg{display:block;margin:0 auto}
   .musubi h2{
-    font-family:"Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN","Hiragino Sans",sans-serif;
-    font-size:21px;font-weight:600;line-height:1.75;letter-spacing:.04em;
-    text-wrap:balance;margin:6px 0 16px;
+    font-size:22px;font-weight:800;line-height:1.7;letter-spacing:.04em;
+    text-wrap:balance;margin:6px 0 16px;color:#fdfbf5;
   }
-  .musubi p{font-size:13.5px;line-height:2.1;color:var(--moji2);margin-bottom:22px}
+  .musubi p{font-size:13.5px;line-height:2.1;color:var(--zougei2);margin-bottom:22px;padding:0 26px}
   .musubi-botan{
-    display:block;background:var(--line-midori);color:#fff;
-    text-decoration:none;font-weight:600;font-size:15px;letter-spacing:.03em;
-    border-radius:999px;padding:17px 16px;line-height:1.6;
-    font-family:"Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN",sans-serif;
+    display:block;margin:0 26px;
+    background:linear-gradient(180deg,#faeec2 0%,#f0d488 30%,#d4b463 62%,#c9a24b 100%);
+    color:#1a1408;text-decoration:none;font-weight:800;font-size:15px;letter-spacing:.03em;
+    border-radius:14px;padding:18px 16px;line-height:1.6;
+    box-shadow:0 6px 20px rgba(212,180,99,.35),inset 0 1px 0 rgba(255,255,255,.7);
+    animation:kodou 2.6s ease-in-out infinite;
   }
-  .musubi-botan:active{opacity:.85}
-  .musubi p.musubi-shita{font-size:11.5px;color:var(--moji3);margin-top:12px;margin-bottom:0}
+  @keyframes kodou{0%,100%{transform:scale(1)}50%{transform:scale(1.02)}}
+  .musubi-botan:active{opacity:.88}
+  .musubi p.musubi-hint{font-size:11.5px;color:var(--kin-akari);margin:10px 0 0;padding:0 26px}
+  .musubi p.musubi-shita{font-size:11.5px;color:var(--zougei3);margin-top:12px;margin-bottom:0;padding:0 26px}
 
-  footer{
-    max-width:620px;margin:52px auto 0;padding:0 24px 68px;
-    text-align:center;
+  footer{max-width:620px;margin:52px auto 0;padding:0 24px 68px;text-align:center}
+  footer .shirushi{font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--zougei2);margin-bottom:14px}
+  footer p{font-size:12px;line-height:1.9;color:var(--zougei3)}
+
+  @media (prefers-reduced-motion: reduce){
+    .tobira h1,.musubi-botan{animation:none}
   }
-  footer .shirushi{
-    font-family:"Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN",sans-serif;
-    font-size:13px;font-weight:600;letter-spacing:.08em;color:var(--moji2);margin-bottom:14px;
-  }
-  footer p{font-size:12px;line-height:1.9;color:var(--moji3)}
 </style>
 </head>
 <body>
@@ -309,35 +337,36 @@
 <!-- 表紙 -->
 <header class="tobira">
   <div class="tobira-uchi">
-    <div class="tobira-badge">🔰 はじめてでも大丈夫</div>
-    <div class="tobira-mayu">無料特典｜保存版</div>
+    <div class="tobira-badge">無料プレゼント</div>
+    <div class="tobira-mayu">超初心者向け｜完全保存版</div>
 
     <!-- 図解A: 0→1の虹アーチ -->
-    <svg width="300" height="150" viewBox="0 0 320 160" fill="none" role="img" aria-label="ゼロからイチへ、虹の橋をわたる図">
-      <line x1="24" y1="128" x2="296" y2="128" stroke="#efe9dc" stroke-width="2"/>
-      <path d="M96 92 Q160 22 236 44" stroke="#ef8a5a" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 9"/>
-      <path d="M99 104 Q163 40 240 58" stroke="#f2b64b" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 9"/>
-      <path d="M100 116 Q166 58 243 72" stroke="#6aa96e" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 9"/>
-      <circle cx="64" cy="96" r="30" stroke="#a84a1c" stroke-width="3" fill="#fdeee4"/>
-      <rect x="252" y="30" width="7" height="98" rx="3.5" fill="#2e6f9e"/>
-      <path d="M255 33 L238 48" stroke="#2e6f9e" stroke-width="7" stroke-linecap="round"/>
-      <path d="M259 30 L282 38 L259 48 Z" fill="#5b9fc9"/>
-      <circle cx="292" cy="26" r="3" fill="#ef8a5a"/>
-      <circle cx="228" cy="14" r="2.5" fill="#6aa96e"/>
-      <circle cx="270" cy="66" r="2.5" fill="#f2b64b"/>
-      <text x="64" y="150" text-anchor="middle" font-size="11.5" fill="#6e6a60">いまのあなた</text>
-      <text x="256" y="150" text-anchor="middle" font-size="11.5" font-weight="600" fill="#2e6f9e">これからのあなた</text>
+    <svg width="300" height="150" viewBox="0 0 320 160" fill="none" role="img" aria-label="ゼロからイチへ、金の橋をわたる図">
+      <line x1="24" y1="128" x2="296" y2="128" stroke="#3a3021" stroke-width="2"/>
+      <path d="M96 92 Q160 22 236 44" stroke="#f0d488" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 9"/>
+      <path d="M99 104 Q163 40 240 58" stroke="#d4b463" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 9"/>
+      <path d="M100 116 Q166 58 243 72" stroke="#9a7a30" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 9"/>
+      <circle cx="64" cy="96" r="30" stroke="#d4b463" stroke-width="3" fill="rgba(212,180,99,.08)"/>
+      <rect x="252" y="30" width="7" height="98" rx="3.5" fill="#f0d488"/>
+      <path d="M255 33 L238 48" stroke="#f0d488" stroke-width="7" stroke-linecap="round"/>
+      <path d="M259 30 L282 38 L259 48 Z" fill="#d4b463"/>
+      <circle cx="292" cy="26" r="3" fill="#f0d488"/>
+      <circle cx="228" cy="14" r="2.5" fill="#d4b463"/>
+      <circle cx="270" cy="66" r="2.5" fill="#c9463f"/>
+      <text x="64" y="150" text-anchor="middle" font-size="11.5" fill="#a89e8a">いまのあなた</text>
+      <text x="256" y="150" text-anchor="middle" font-size="11.5" font-weight="600" fill="#f0d488">これからのあなた</text>
     </svg>
 
     <h1>超初心者のための<br>AI副業 <span class="ji-sango">0</span><span class="ji-hachi">→</span><span class="ji-sora">1</span>講座</h1>
     <p class="tobira-riido">
       特別なスキルも、まとまった時間もいりません。<br>
       AIという頼れる相棒がいれば、<br>
-      “最初の1円”は、ちゃんと手の届く目標になります。
+      “最初の1円”は、<br>
+      ちゃんと手の届く目標になります。
     </p>
     <div class="tobira-yajirushi">
       <svg width="22" height="12" viewBox="0 0 22 12" fill="none" aria-hidden="true">
-        <path d="M2 2 L11 10 L20 2" stroke="#b9b3a4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M2 2 L11 10 L20 2" stroke="#8a7f66" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </div>
   </div>
@@ -355,33 +384,24 @@
       3つに絞ってお渡しします。
     </p>
 
-    <!-- 図解B: 全体地図（3つの扉） -->
-    <div class="zukai">
-      <div class="zukai-dai">この講座の全体地図</div>
-      <svg viewBox="0 0 320 252" fill="none" role="img" aria-label="3つの強みを知り、3つのノウハウの扉を開けて、0→1を達成する地図">
-        <rect x="76" y="10" width="168" height="40" rx="20" fill="#fdf3dd" stroke="#f2b64b" stroke-width="1.5"/>
-        <text x="160" y="35" text-anchor="middle" font-size="12.5" font-weight="600" fill="#3a3833">AIの3つの強みを知る</text>
-        <path d="M160 50 L160 68" stroke="#8a5f0e" stroke-width="2" stroke-linecap="round"/>
-        <path d="M154 62 L160 70 L166 62" stroke="#8a5f0e" stroke-width="2" stroke-linecap="round" fill="none"/>
-        <rect x="12" y="80" width="92" height="76" rx="14" fill="#fdeee4" stroke="#ef8a5a" stroke-width="1.5"/>
-        <circle cx="88" cy="118" r="3" fill="#a84a1c"/>
-        <text x="58" y="112" text-anchor="middle" font-size="12" font-weight="600" fill="#a84a1c">その1</text>
-        <text x="58" y="136" text-anchor="middle" font-size="12" fill="#3a3833">画像販売</text>
-        <rect x="114" y="80" width="92" height="76" rx="14" fill="#e7f1f7" stroke="#5b9fc9" stroke-width="1.5"/>
-        <circle cx="190" cy="118" r="3" fill="#2e6f9e"/>
-        <text x="160" y="112" text-anchor="middle" font-size="12" font-weight="600" fill="#2e6f9e">その2</text>
-        <text x="160" y="136" text-anchor="middle" font-size="12" fill="#3a3833">Webページ</text>
-        <rect x="216" y="80" width="92" height="76" rx="14" fill="#e9f3e9" stroke="#6aa96e" stroke-width="1.5"/>
-        <circle cx="292" cy="118" r="3" fill="#35693a"/>
-        <text x="262" y="112" text-anchor="middle" font-size="12" font-weight="600" fill="#35693a">その3</text>
-        <text x="262" y="136" text-anchor="middle" font-size="12" fill="#3a3833">SNSとnote</text>
-        <path d="M58 156 L58 176 Q58 190 82 190 L128 190" stroke="#efe9dc" stroke-width="2" fill="none"/>
-        <path d="M262 156 L262 176 Q262 190 238 190 L192 190" stroke="#efe9dc" stroke-width="2" fill="none"/>
-        <path d="M160 156 L160 186" stroke="#efe9dc" stroke-width="2"/>
-        <rect x="70" y="196" width="180" height="42" rx="21" fill="#35693a"/>
-        <text x="160" y="222" text-anchor="middle" font-size="13" font-weight="600" fill="#ffffff">あなたの“0→1”達成</text>
-      </svg>
-      <div class="zukai-soe">この順番で、そのまま進めば大丈夫 ✨</div>
+    <!-- 目次: 3つのノウハウ -->
+    <div class="mokuji">
+      <div class="mokuji-dai">この特典で受け取れる3つのノウハウ</div>
+      <div class="mokuji-retsu">
+        <div class="mokuji-fuda">
+          <div class="mokuji-ban">01</div>
+          <div class="mokuji-naka"><h3>AI画像販売で<span class="aka-ji">「最初の1円」</span></h3></div>
+        </div>
+        <div class="mokuji-fuda">
+          <div class="mokuji-ban">02</div>
+          <div class="mokuji-naka"><h3>Webページ制作で<span class="aka-ji">「単価アップ」</span></h3></div>
+        </div>
+        <div class="mokuji-fuda">
+          <div class="mokuji-ban">03</div>
+          <div class="mokuji-naka"><h3>AI×SNSとnoteで<span class="aka-ji">「資産化」</span></h3></div>
+        </div>
+      </div>
+      <div class="mokuji-soe">この順番で、そのまま進めば大丈夫</div>
     </div>
   </div>
 
@@ -399,19 +419,19 @@
     <div class="zukai">
       <div class="zukai-dai">あなたを支える3本の柱</div>
       <svg viewBox="0 0 320 212" fill="none" role="img" aria-label="賢い・再現性・自動化の3本の柱が、あなたの0→1を支える図">
-        <rect x="44" y="16" width="232" height="38" rx="12" fill="#fdf3dd" stroke="#f2b64b" stroke-width="1.5"/>
+        <rect x="44" y="16" width="232" height="38" rx="12" fill="#f7efdc" stroke="#d4b463" stroke-width="1.5"/>
         <text x="160" y="40" text-anchor="middle" font-size="13" font-weight="600" fill="#3a3833">あなたの0→1</text>
-        <rect x="56" y="66" width="60" height="92" rx="10" fill="#fdeee4" stroke="#ef8a5a" stroke-width="1.5"/>
-        <circle cx="86" cy="92" r="10" stroke="#a84a1c" stroke-width="2" fill="#ffffff"/>
-        <path d="M82 104 L90 104" stroke="#a84a1c" stroke-width="2" stroke-linecap="round"/>
+        <rect x="56" y="66" width="60" height="92" rx="10" fill="#fae9e7" stroke="#c9463f" stroke-width="1.5"/>
+        <circle cx="86" cy="92" r="10" stroke="#a51e28" stroke-width="2" fill="#ffffff"/>
+        <path d="M82 104 L90 104" stroke="#a51e28" stroke-width="2" stroke-linecap="round"/>
         <text x="86" y="140" text-anchor="middle" font-size="12.5" font-weight="600" fill="#3a3833">賢い</text>
-        <rect x="130" y="66" width="60" height="92" rx="10" fill="#e7f1f7" stroke="#5b9fc9" stroke-width="1.5"/>
-        <rect x="146" y="84" width="20" height="20" rx="4" fill="#ffffff" stroke="#2e6f9e" stroke-width="1.6"/>
-        <rect x="154" y="92" width="20" height="20" rx="4" fill="#ffffff" stroke="#2e6f9e" stroke-width="1.6"/>
+        <rect x="130" y="66" width="60" height="92" rx="10" fill="#f7efdc" stroke="#d4b463" stroke-width="1.5"/>
+        <rect x="146" y="84" width="20" height="20" rx="4" fill="#ffffff" stroke="#7a5d24" stroke-width="1.6"/>
+        <rect x="154" y="92" width="20" height="20" rx="4" fill="#ffffff" stroke="#7a5d24" stroke-width="1.6"/>
         <text x="160" y="140" text-anchor="middle" font-size="12.5" font-weight="600" fill="#3a3833">再現性</text>
-        <rect x="204" y="66" width="60" height="92" rx="10" fill="#e9f3e9" stroke="#6aa96e" stroke-width="1.5"/>
-        <circle cx="234" cy="96" r="10" stroke="#3d7a42" stroke-width="2" fill="#ffffff"/>
-        <path d="M234 82 L234 76 M234 110 L234 116 M220 96 L214 96 M248 96 L254 96" stroke="#3d7a42" stroke-width="2" stroke-linecap="round"/>
+        <rect x="204" y="66" width="60" height="92" rx="10" fill="#f7efdc" stroke="#d4b463" stroke-width="1.5"/>
+        <circle cx="234" cy="96" r="10" stroke="#7a5d24" stroke-width="2" fill="#ffffff"/>
+        <path d="M234 82 L234 76 M234 110 L234 116 M220 96 L214 96 M248 96 L254 96" stroke="#7a5d24" stroke-width="2" stroke-linecap="round"/>
         <text x="234" y="140" text-anchor="middle" font-size="12.5" font-weight="600" fill="#3a3833">自動化</text>
         <rect x="40" y="168" width="240" height="30" rx="10" fill="#5f5b52"/>
         <text x="160" y="188" text-anchor="middle" font-size="12" font-weight="600" fill="#ffffff">AIという相棒</text>
@@ -479,17 +499,17 @@
         <polyline points="30,130 58,106 88,96 116,93 138,92" stroke="#8a857a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
         <text x="110" y="80" text-anchor="middle" font-size="11.5" fill="#6e6a60">頭打ち</text>
         <text x="82" y="158" text-anchor="middle" font-size="11.5" fill="#5f5b52">時間を売る</text>
-        <rect x="165" y="12" width="145" height="152" rx="14" fill="#e7f1f7" stroke="#5b9fc9" stroke-width="1.5"/>
-        <text x="237" y="38" text-anchor="middle" font-size="12" font-weight="600" fill="#2e6f9e">AIの副業</text>
-        <rect x="182" y="126" width="24" height="13" rx="3" fill="#f2b64b" stroke="#8a5f0e"/>
-        <rect x="214" y="126" width="24" height="13" rx="3" fill="#ef8a5a" stroke="#a84a1c"/>
-        <rect x="214" y="111" width="24" height="13" rx="3" fill="#f2b64b" stroke="#8a5f0e"/>
-        <rect x="246" y="126" width="24" height="13" rx="3" fill="#6aa96e" stroke="#3d7a42"/>
-        <rect x="246" y="111" width="24" height="13" rx="3" fill="#ef8a5a" stroke="#a84a1c"/>
-        <rect x="246" y="96" width="24" height="13" rx="3" fill="#f2b64b" stroke="#8a5f0e"/>
-        <path d="M184 108 C 212 98, 240 84, 266 72" stroke="#2e6f9e" stroke-width="2" stroke-linecap="round"/>
-        <path d="M258 70 L268 71 L262 79" stroke="#2e6f9e" stroke-width="2" stroke-linecap="round" fill="none"/>
-        <text x="237" y="158" text-anchor="middle" font-size="11.5" font-weight="600" fill="#2e6f9e">仕組みを積む</text>
+        <rect x="165" y="12" width="145" height="152" rx="14" fill="#f7efdc" stroke="#d4b463" stroke-width="1.5"/>
+        <text x="237" y="38" text-anchor="middle" font-size="12" font-weight="600" fill="#7a5d24">AIの副業</text>
+        <rect x="182" y="126" width="24" height="13" rx="3" fill="#d4b463" stroke="#7a5d24"/>
+        <rect x="214" y="126" width="24" height="13" rx="3" fill="#c9463f" stroke="#a51e28"/>
+        <rect x="214" y="111" width="24" height="13" rx="3" fill="#d4b463" stroke="#7a5d24"/>
+        <rect x="246" y="126" width="24" height="13" rx="3" fill="#d4b463" stroke="#7a5d24"/>
+        <rect x="246" y="111" width="24" height="13" rx="3" fill="#c9463f" stroke="#a51e28"/>
+        <rect x="246" y="96" width="24" height="13" rx="3" fill="#d4b463" stroke="#7a5d24"/>
+        <path d="M184 108 C 212 98, 240 84, 266 72" stroke="#7a5d24" stroke-width="2" stroke-linecap="round"/>
+        <path d="M258 70 L268 71 L262 79" stroke="#7a5d24" stroke-width="2" stroke-linecap="round" fill="none"/>
+        <text x="237" y="158" text-anchor="middle" font-size="11.5" font-weight="600" fill="#7a5d24">仕組みを積む</text>
         <text x="160" y="188" text-anchor="middle" font-size="12" fill="#5f5b52">時間の切り売りから、積み上げ型へ</text>
       </svg>
     </div>
@@ -519,37 +539,37 @@
         <div class="tejun-koma">
           <span class="tejun-ban">その1</span>
           <svg width="38" height="38" viewBox="0 0 44 44" fill="none" aria-hidden="true">
-            <rect x="8" y="9" width="28" height="25" rx="5" stroke="#a84a1c" stroke-width="1.8" fill="#ffffff"/>
-            <circle cx="17" cy="17" r="3" fill="#f2b64b"/>
-            <polyline points="11,30 19,22 25,27 33,19" stroke="#a84a1c" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="8" y="9" width="28" height="25" rx="5" stroke="#a51e28" stroke-width="1.8" fill="#ffffff"/>
+            <circle cx="17" cy="17" r="3" fill="#d4b463"/>
+            <polyline points="11,30 19,22 25,27 33,19" stroke="#a51e28" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
           <h4>商用OKのAIで<br>画像をつくる</h4>
         </div>
         <div class="tejun-koma">
           <span class="tejun-ban">その2</span>
           <svg width="38" height="38" viewBox="0 0 44 44" fill="none" aria-hidden="true">
-            <rect x="10" y="16" width="18" height="18" rx="4" fill="#fdeee4" stroke="#a84a1c" stroke-width="1.5"/>
-            <rect x="15" y="11" width="18" height="18" rx="4" fill="#ffffff" stroke="#a84a1c" stroke-width="1.5"/>
-            <rect x="20" y="6" width="18" height="18" rx="4" fill="#ffffff" stroke="#a84a1c" stroke-width="1.8"/>
+            <rect x="10" y="16" width="18" height="18" rx="4" fill="#fae9e7" stroke="#a51e28" stroke-width="1.5"/>
+            <rect x="15" y="11" width="18" height="18" rx="4" fill="#ffffff" stroke="#a51e28" stroke-width="1.5"/>
+            <rect x="20" y="6" width="18" height="18" rx="4" fill="#ffffff" stroke="#a51e28" stroke-width="1.8"/>
           </svg>
           <h4>テーマを絞って<br>セットにする</h4>
         </div>
         <div class="tejun-koma">
           <span class="tejun-ban">その3</span>
           <svg width="38" height="38" viewBox="0 0 44 44" fill="none" aria-hidden="true">
-            <path d="M12 21 L24 9 L35 9 L35 20 L23 32 Z" fill="#ffffff" stroke="#a84a1c" stroke-width="1.8" stroke-linejoin="round"/>
-            <circle cx="30" cy="14" r="2.5" fill="#f2b64b" stroke="#a84a1c" stroke-width="1.2"/>
+            <path d="M12 21 L24 9 L35 9 L35 20 L23 32 Z" fill="#ffffff" stroke="#a51e28" stroke-width="1.8" stroke-linejoin="round"/>
+            <circle cx="30" cy="14" r="2.5" fill="#d4b463" stroke="#a51e28" stroke-width="1.2"/>
           </svg>
           <h4>BOOTHやnoteに<br>出品する</h4>
         </div>
         <div class="tejun-koma">
           <span class="tejun-ban">その4</span>
           <svg width="38" height="38" viewBox="0 0 44 44" fill="none" aria-hidden="true">
-            <rect x="8" y="10" width="28" height="20" rx="7" stroke="#a84a1c" stroke-width="1.8" fill="#ffffff"/>
-            <path d="M18 30 L16 37 L24 30" fill="#ffffff" stroke="#a84a1c" stroke-width="1.8" stroke-linejoin="round"/>
-            <circle cx="17" cy="20" r="1.8" fill="#ef8a5a"/>
-            <circle cx="22" cy="20" r="1.8" fill="#ef8a5a"/>
-            <circle cx="27" cy="20" r="1.8" fill="#ef8a5a"/>
+            <rect x="8" y="10" width="28" height="20" rx="7" stroke="#a51e28" stroke-width="1.8" fill="#ffffff"/>
+            <path d="M18 30 L16 37 L24 30" fill="#ffffff" stroke="#a51e28" stroke-width="1.8" stroke-linejoin="round"/>
+            <circle cx="17" cy="20" r="1.8" fill="#c9463f"/>
+            <circle cx="22" cy="20" r="1.8" fill="#c9463f"/>
+            <circle cx="27" cy="20" r="1.8" fill="#c9463f"/>
           </svg>
           <h4>SNSで<br>そっと紹介する</h4>
         </div>
@@ -560,29 +580,29 @@
     <div class="zukai">
       <div class="zukai-dai">300円の積み上げ構造</div>
       <svg viewBox="0 0 320 206" fill="none" role="img" aria-label="300円が10件で月3000円になる積み上げ図">
-        <text x="160" y="26" text-anchor="middle" font-size="14" font-weight="600" fill="#3a3833">300円 × 10件 ＝ 月3,000円</text>
-        <ellipse cx="70" cy="148" rx="26" ry="7" fill="#ef8a5a" stroke="#a84a1c"/>
-        <ellipse cx="160" cy="148" rx="26" ry="7" fill="#ef8a5a" stroke="#a84a1c"/>
-        <ellipse cx="160" cy="139" rx="26" ry="7" fill="#ef8a5a" stroke="#a84a1c"/>
-        <ellipse cx="160" cy="130" rx="26" ry="7" fill="#ef8a5a" stroke="#a84a1c"/>
-        <ellipse cx="160" cy="121" rx="26" ry="7" fill="#ef8a5a" stroke="#a84a1c"/>
-        <ellipse cx="160" cy="112" rx="26" ry="7" fill="#ef8a5a" stroke="#a84a1c"/>
-        <ellipse cx="250" cy="148" rx="26" ry="7" fill="#ef8a5a" stroke="#a84a1c"/>
-        <ellipse cx="250" cy="139" rx="26" ry="7" fill="#ef8a5a" stroke="#a84a1c"/>
-        <ellipse cx="250" cy="130" rx="26" ry="7" fill="#ef8a5a" stroke="#a84a1c"/>
-        <ellipse cx="250" cy="121" rx="26" ry="7" fill="#ef8a5a" stroke="#a84a1c"/>
-        <ellipse cx="250" cy="112" rx="26" ry="7" fill="#ef8a5a" stroke="#a84a1c"/>
-        <ellipse cx="250" cy="103" rx="26" ry="7" fill="#ef8a5a" stroke="#a84a1c"/>
-        <ellipse cx="250" cy="94" rx="26" ry="7" fill="#ef8a5a" stroke="#a84a1c"/>
-        <ellipse cx="250" cy="85" rx="26" ry="7" fill="#ef8a5a" stroke="#a84a1c"/>
-        <ellipse cx="250" cy="76" rx="26" ry="7" fill="#ef8a5a" stroke="#a84a1c"/>
-        <ellipse cx="250" cy="67" rx="26" ry="7" fill="#ef8a5a" stroke="#a84a1c"/>
+        <text x="160" y="26" text-anchor="middle" font-size="15" font-weight="700" fill="#7a5d24">300円 × 10件 ＝ 月3,000円</text>
+        <ellipse cx="70" cy="148" rx="26" ry="7" fill="#c39a3f" stroke="#7a5d24"/>
+        <ellipse cx="160" cy="148" rx="26" ry="7" fill="#c39a3f" stroke="#7a5d24"/>
+        <ellipse cx="160" cy="139" rx="26" ry="7" fill="#c39a3f" stroke="#7a5d24"/>
+        <ellipse cx="160" cy="130" rx="26" ry="7" fill="#c39a3f" stroke="#7a5d24"/>
+        <ellipse cx="160" cy="121" rx="26" ry="7" fill="#c39a3f" stroke="#7a5d24"/>
+        <ellipse cx="160" cy="112" rx="26" ry="7" fill="#c39a3f" stroke="#7a5d24"/>
+        <ellipse cx="250" cy="148" rx="26" ry="7" fill="#c39a3f" stroke="#7a5d24"/>
+        <ellipse cx="250" cy="139" rx="26" ry="7" fill="#c39a3f" stroke="#7a5d24"/>
+        <ellipse cx="250" cy="130" rx="26" ry="7" fill="#c39a3f" stroke="#7a5d24"/>
+        <ellipse cx="250" cy="121" rx="26" ry="7" fill="#c39a3f" stroke="#7a5d24"/>
+        <ellipse cx="250" cy="112" rx="26" ry="7" fill="#c39a3f" stroke="#7a5d24"/>
+        <ellipse cx="250" cy="103" rx="26" ry="7" fill="#c39a3f" stroke="#7a5d24"/>
+        <ellipse cx="250" cy="94" rx="26" ry="7" fill="#c39a3f" stroke="#7a5d24"/>
+        <ellipse cx="250" cy="85" rx="26" ry="7" fill="#c39a3f" stroke="#7a5d24"/>
+        <ellipse cx="250" cy="76" rx="26" ry="7" fill="#c39a3f" stroke="#7a5d24"/>
+        <ellipse cx="250" cy="67" rx="26" ry="7" fill="#c39a3f" stroke="#7a5d24"/>
         <text x="70" y="174" text-anchor="middle" font-size="12" fill="#3a3833">1件</text>
         <text x="160" y="174" text-anchor="middle" font-size="12" fill="#3a3833">5件</text>
         <text x="250" y="174" text-anchor="middle" font-size="12" fill="#3a3833">10件</text>
-        <text x="70" y="192" text-anchor="middle" font-size="11.5" font-weight="600" fill="#a84a1c">300円</text>
-        <text x="160" y="192" text-anchor="middle" font-size="11.5" font-weight="600" fill="#a84a1c">1,500円</text>
-        <text x="250" y="192" text-anchor="middle" font-size="11.5" font-weight="600" fill="#a84a1c">3,000円</text>
+        <text x="70" y="192" text-anchor="middle" font-size="11.5" font-weight="600" fill="#7a5d24">300円</text>
+        <text x="160" y="192" text-anchor="middle" font-size="11.5" font-weight="600" fill="#7a5d24">1,500円</text>
+        <text x="250" y="192" text-anchor="middle" font-size="11.5" font-weight="600" fill="#7a5d24">3,000円</text>
       </svg>
       <div class="zukai-soe">金額よりも、“売れた”という事実が財産になります</div>
     </div>
@@ -612,21 +632,21 @@
       <div class="rei-obi">たとえば：会社員Aさん（架空）のばあい</div>
       <div class="rei-naka">
         <svg viewBox="0 0 320 258" fill="none" role="img" aria-label="会社員Aさんが土曜2時間の画像づくりから2週間で900円を達成する架空のタイムライン">
-          <line x1="34" y1="24" x2="34" y2="234" stroke="#ef8a5a" stroke-width="2" stroke-dasharray="2 6"/>
-          <circle cx="34" cy="34" r="7" fill="#ffffff" stroke="#ef8a5a" stroke-width="2.5"/>
-          <rect x="56" y="12" width="252" height="44" rx="12" fill="#fdeee4" stroke="#ef8a5a" stroke-width="1.2"/>
-          <text x="70" y="30" font-size="11.5" font-weight="600" fill="#a84a1c">土曜の午後・2時間</text>
+          <line x1="34" y1="24" x2="34" y2="234" stroke="#c9463f" stroke-width="2" stroke-dasharray="2 6"/>
+          <circle cx="34" cy="34" r="7" fill="#ffffff" stroke="#c9463f" stroke-width="2.5"/>
+          <rect x="56" y="12" width="252" height="44" rx="12" fill="#fae9e7" stroke="#c9463f" stroke-width="1.2"/>
+          <text x="70" y="30" font-size="11.5" font-weight="600" fill="#a51e28">土曜の午後・2時間</text>
           <text x="70" y="47" font-size="11.5" fill="#3a3833">猫のアイコン素材を12枚つくる</text>
-          <circle cx="34" cy="98" r="7" fill="#ffffff" stroke="#ef8a5a" stroke-width="2.5"/>
+          <circle cx="34" cy="98" r="7" fill="#ffffff" stroke="#c9463f" stroke-width="2.5"/>
           <rect x="56" y="76" width="252" height="44" rx="12" fill="#ffffff" stroke="#efe9dc" stroke-width="1.5"/>
-          <text x="70" y="94" font-size="11.5" font-weight="600" fill="#a84a1c">その日のうちに</text>
+          <text x="70" y="94" font-size="11.5" font-weight="600" fill="#a51e28">その日のうちに</text>
           <text x="70" y="111" font-size="11.5" fill="#3a3833">3枚セット×4点をBOOTHに300円で出品</text>
-          <circle cx="34" cy="162" r="7" fill="#ffffff" stroke="#ef8a5a" stroke-width="2.5"/>
+          <circle cx="34" cy="162" r="7" fill="#ffffff" stroke="#c9463f" stroke-width="2.5"/>
           <rect x="56" y="140" width="252" height="44" rx="12" fill="#ffffff" stroke="#efe9dc" stroke-width="1.5"/>
-          <text x="70" y="158" font-size="11.5" font-weight="600" fill="#a84a1c">2週間後</text>
+          <text x="70" y="158" font-size="11.5" font-weight="600" fill="#a51e28">2週間後</text>
           <text x="70" y="175" font-size="11.5" fill="#3a3833">3件うれる（SNSでそっと紹介）</text>
-          <circle cx="34" cy="226" r="7" fill="#a84a1c" stroke="#a84a1c" stroke-width="2.5"/>
-          <rect x="56" y="204" width="252" height="44" rx="12" fill="#a84a1c"/>
+          <circle cx="34" cy="226" r="7" fill="#a51e28" stroke="#a51e28" stroke-width="2.5"/>
+          <rect x="56" y="204" width="252" height="44" rx="12" fill="#a51e28"/>
           <text x="70" y="222" font-size="11.5" font-weight="600" fill="#ffffff">合計900円</text>
           <text x="70" y="239" font-size="11.5" fill="#ffffff">“売れた”という事実＝0→1達成</text>
         </svg>
@@ -663,16 +683,16 @@
         <rect x="27" y="78" width="86" height="4" rx="2" fill="#d8d2c4"/>
         <rect x="27" y="92" width="56" height="4" rx="2" fill="#d8d2c4"/>
         <rect x="27" y="106" width="74" height="4" rx="2" fill="#d8d2c4"/>
-        <rect x="126" y="60" width="80" height="26" rx="13" fill="#2e6f9e"/>
+        <rect x="126" y="60" width="80" height="26" rx="13" fill="#7a5d24"/>
         <text x="166" y="77" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">Claude Code</text>
-        <path d="M136 100 L192 100" stroke="#2e6f9e" stroke-width="2" stroke-linecap="round"/>
-        <path d="M185 94 L194 100 L185 106" stroke="#2e6f9e" stroke-width="2" stroke-linecap="round" fill="none"/>
+        <path d="M136 100 L192 100" stroke="#7a5d24" stroke-width="2" stroke-linecap="round"/>
+        <path d="M185 94 L194 100 L185 106" stroke="#7a5d24" stroke-width="2" stroke-linecap="round" fill="none"/>
         <rect x="224" y="22" width="74" height="136" rx="14" fill="#ffffff" stroke="#3a3833" stroke-width="1.8"/>
-        <rect x="232" y="32" width="58" height="15" rx="4" fill="#5b9fc9"/>
-        <rect x="232" y="51" width="58" height="27" rx="4" fill="#e7f1f7"/>
-        <rect x="232" y="84" width="58" height="8" rx="3" fill="#fdf3dd"/>
-        <rect x="232" y="96" width="58" height="8" rx="3" fill="#fdf3dd"/>
-        <rect x="240" y="112" width="42" height="12" rx="6" fill="#ef8a5a"/>
+        <rect x="232" y="32" width="58" height="15" rx="4" fill="#d4b463"/>
+        <rect x="232" y="51" width="58" height="27" rx="4" fill="#f7efdc"/>
+        <rect x="232" y="84" width="58" height="8" rx="3" fill="#f7efdc"/>
+        <rect x="232" y="96" width="58" height="8" rx="3" fill="#f7efdc"/>
+        <rect x="240" y="112" width="42" height="12" rx="6" fill="#c9463f"/>
         <line x1="250" y1="148" x2="272" y2="148" stroke="#d8d2c4" stroke-width="2.5" stroke-linecap="round"/>
         <text x="70" y="166" text-anchor="middle" font-size="11.5" fill="#5f5b52">日本語で、お願いを書く</text>
         <text x="261" y="176" text-anchor="middle" font-size="11.5" fill="#5f5b52">Webページが完成</text>
@@ -737,18 +757,18 @@
       <div class="rei-naka">
         <svg viewBox="0 0 320 302" fill="none" role="img" aria-label="行きつけの美容室にページを提案し、試作を見せて、直しを重ねて2週間で完成し、お礼に3万円をもらう架空の流れ図">
           <text x="20" y="22" font-size="11" fill="#5f5b52">あなた</text>
-          <path d="M32 30 L248 30 Q260 30 260 42 L260 56 Q260 68 248 68 L52 68 L36 82 L40 68 Q20 68 20 56 L20 42 Q20 30 32 30 Z" fill="#e7f1f7" stroke="#5b9fc9" stroke-width="1.2"/>
+          <path d="M32 30 L248 30 Q260 30 260 42 L260 56 Q260 68 248 68 L52 68 L36 82 L40 68 Q20 68 20 56 L20 42 Q20 30 32 30 Z" fill="#f7efdc" stroke="#d4b463" stroke-width="1.2"/>
           <text x="36" y="54" font-size="11.5" fill="#3a3833">「お店のページ、作りましょうか？」</text>
-          <rect x="48" y="96" width="224" height="34" rx="17" fill="#ffffff" stroke="#5b9fc9" stroke-width="1.5"/>
-          <circle cx="70" cy="113" r="7" stroke="#2e6f9e" stroke-width="1.6" fill="none"/>
-          <path d="M70 109 L70 113 L73 115" stroke="#2e6f9e" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+          <rect x="48" y="96" width="224" height="34" rx="17" fill="#ffffff" stroke="#d4b463" stroke-width="1.5"/>
+          <circle cx="70" cy="113" r="7" stroke="#7a5d24" stroke-width="1.6" fill="none"/>
+          <path d="M70 109 L70 113 L73 115" stroke="#7a5d24" stroke-width="1.6" stroke-linecap="round" fill="none"/>
           <text x="86" y="118" font-size="11.5" fill="#3a3833">Claude Codeで試作 約1時間</text>
           <text x="300" y="152" text-anchor="end" font-size="11" fill="#5f5b52">美容室のオーナー</text>
-          <path d="M100 160 L288 160 Q300 160 300 172 L300 186 Q300 198 288 198 L284 198 L288 212 L272 198 L100 198 Q88 198 88 186 L88 172 Q88 160 100 160 Z" fill="#fdeee4" stroke="#ef8a5a" stroke-width="1.2"/>
+          <path d="M100 160 L288 160 Q300 160 300 172 L300 186 Q300 198 288 198 L284 198 L288 212 L272 198 L100 198 Q88 198 88 186 L88 172 Q88 160 100 160 Z" fill="#fae9e7" stroke="#c9463f" stroke-width="1.2"/>
           <text x="104" y="184" font-size="11.5" fill="#3a3833">「すてき！ぜひお願いします」</text>
-          <rect x="48" y="222" width="224" height="34" rx="17" fill="#ffffff" stroke="#5b9fc9" stroke-width="1.5"/>
+          <rect x="48" y="222" width="224" height="34" rx="17" fill="#ffffff" stroke="#d4b463" stroke-width="1.5"/>
           <text x="160" y="244" text-anchor="middle" font-size="11.5" fill="#3a3833">直しを重ねて、2週間で完成</text>
-          <rect x="70" y="268" width="180" height="28" rx="14" fill="#2e6f9e"/>
+          <rect x="70" y="268" width="180" height="28" rx="14" fill="#7a5d24"/>
           <text x="160" y="286" text-anchor="middle" font-size="12" font-weight="600" fill="#ffffff">完成のお礼に 3万円</text>
         </svg>
       </div>
@@ -770,27 +790,27 @@
     <div class="zukai">
       <div class="zukai-dai">ふたつの軸の役割分担</div>
       <svg viewBox="0 0 320 224" fill="none" role="img" aria-label="AI×SNSで読者を集め、Claude Code×noteで売るものをつくり、掛け合わせて資産型の柱にする図">
-        <rect x="10" y="14" width="145" height="118" rx="14" fill="#e9f3e9" stroke="#6aa96e" stroke-width="1.5"/>
-        <text x="82" y="42" text-anchor="middle" font-size="13" font-weight="600" fill="#35693a">AI×SNS</text>
-        <path d="M66 76 L90 64 L90 92 L66 84 Z" fill="#ffffff" stroke="#35693a" stroke-width="1.6" stroke-linejoin="round"/>
-        <path d="M97 68 Q106 78 97 88" stroke="#35693a" stroke-width="1.6" stroke-linecap="round" fill="none"/>
-        <rect x="30" y="100" width="104" height="22" rx="11" fill="#35693a"/>
+        <rect x="10" y="14" width="145" height="118" rx="14" fill="#fae9e7" stroke="#c9463f" stroke-width="1.5"/>
+        <text x="82" y="42" text-anchor="middle" font-size="13" font-weight="600" fill="#a51e28">AI×SNS</text>
+        <path d="M66 76 L90 64 L90 92 L66 84 Z" fill="#ffffff" stroke="#a51e28" stroke-width="1.6" stroke-linejoin="round"/>
+        <path d="M97 68 Q106 78 97 88" stroke="#a51e28" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+        <rect x="30" y="100" width="104" height="22" rx="11" fill="#a51e28"/>
         <text x="82" y="115" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">読者を集める</text>
-        <rect x="165" y="14" width="145" height="118" rx="14" fill="#e7f1f7" stroke="#5b9fc9" stroke-width="1.5"/>
-        <text x="237" y="42" text-anchor="middle" font-size="12" font-weight="600" fill="#2e6f9e">Claude Code×note</text>
-        <rect x="222" y="58" width="24" height="32" rx="4" fill="#ffffff" stroke="#2e6f9e" stroke-width="1.6"/>
-        <line x1="227" y1="67" x2="241" y2="67" stroke="#5b9fc9" stroke-width="1.6" stroke-linecap="round"/>
-        <line x1="227" y1="75" x2="241" y2="75" stroke="#5b9fc9" stroke-width="1.6" stroke-linecap="round"/>
-        <line x1="227" y1="83" x2="237" y2="83" stroke="#5b9fc9" stroke-width="1.6" stroke-linecap="round"/>
-        <rect x="250" y="72" width="20" height="13" rx="3" fill="#e7f1f7" stroke="#2e6f9e" stroke-width="1.4"/>
-        <circle cx="255" cy="78.5" r="1.6" fill="#2e6f9e"/>
-        <rect x="185" y="100" width="104" height="22" rx="11" fill="#2e6f9e"/>
+        <rect x="165" y="14" width="145" height="118" rx="14" fill="#f7efdc" stroke="#d4b463" stroke-width="1.5"/>
+        <text x="237" y="42" text-anchor="middle" font-size="12" font-weight="600" fill="#7a5d24">Claude Code×note</text>
+        <rect x="222" y="58" width="24" height="32" rx="4" fill="#ffffff" stroke="#7a5d24" stroke-width="1.6"/>
+        <line x1="227" y1="67" x2="241" y2="67" stroke="#d4b463" stroke-width="1.6" stroke-linecap="round"/>
+        <line x1="227" y1="75" x2="241" y2="75" stroke="#d4b463" stroke-width="1.6" stroke-linecap="round"/>
+        <line x1="227" y1="83" x2="237" y2="83" stroke="#d4b463" stroke-width="1.6" stroke-linecap="round"/>
+        <rect x="250" y="72" width="20" height="13" rx="3" fill="#f7efdc" stroke="#7a5d24" stroke-width="1.4"/>
+        <circle cx="255" cy="78.5" r="1.6" fill="#7a5d24"/>
+        <rect x="185" y="100" width="104" height="22" rx="11" fill="#7a5d24"/>
         <text x="237" y="115" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">売るものをつくる</text>
         <path d="M82 132 C 82 150, 120 158, 148 161" stroke="#d8d2c4" stroke-width="2" fill="none"/>
         <path d="M237 132 C 237 150, 200 158, 172 161" stroke="#d8d2c4" stroke-width="2" fill="none"/>
-        <path d="M160 156 L160 170" stroke="#35693a" stroke-width="2" stroke-linecap="round"/>
-        <path d="M154 164 L160 172 L166 164" stroke="#35693a" stroke-width="2" stroke-linecap="round" fill="none"/>
-        <rect x="56" y="180" width="208" height="34" rx="17" fill="#35693a"/>
+        <path d="M160 156 L160 170" stroke="#7a5d24" stroke-width="2" stroke-linecap="round"/>
+        <path d="M154 164 L160 172 L166 164" stroke="#7a5d24" stroke-width="2" stroke-linecap="round" fill="none"/>
+        <rect x="56" y="180" width="208" height="34" rx="17" fill="#7a5d24"/>
         <text x="160" y="202" text-anchor="middle" font-size="12.5" font-weight="600" fill="#ffffff">掛け合わせて、資産型の柱に</text>
       </svg>
     </div>
@@ -804,27 +824,27 @@
       <div class="zukai-dai">ぐるぐる回る、改善の輪</div>
       <svg viewBox="0 0 320 300" fill="none" role="img" aria-label="AIとあなたで回す改善の循環図">
         <circle cx="160" cy="152" r="100" stroke="#d8d2c4" stroke-width="1.5" stroke-dasharray="3 6"/>
-        <g transform="translate(219,71) rotate(36)"><path d="M-4 -5 L6 0 L-4 5 Z" fill="#35693a"/></g>
-        <g transform="translate(255,183) rotate(108)"><path d="M-4 -5 L6 0 L-4 5 Z" fill="#35693a"/></g>
-        <g transform="translate(160,252) rotate(180)"><path d="M-4 -5 L6 0 L-4 5 Z" fill="#35693a"/></g>
-        <g transform="translate(65,183) rotate(252)"><path d="M-4 -5 L6 0 L-4 5 Z" fill="#35693a"/></g>
-        <g transform="translate(101,71) rotate(324)"><path d="M-4 -5 L6 0 L-4 5 Z" fill="#35693a"/></g>
-        <rect x="110" y="38" width="100" height="28" rx="14" fill="#e9f3e9" stroke="#6aa96e" stroke-width="1.5"/>
+        <g transform="translate(219,71) rotate(36)"><path d="M-4 -5 L6 0 L-4 5 Z" fill="#7a5d24"/></g>
+        <g transform="translate(255,183) rotate(108)"><path d="M-4 -5 L6 0 L-4 5 Z" fill="#7a5d24"/></g>
+        <g transform="translate(160,252) rotate(180)"><path d="M-4 -5 L6 0 L-4 5 Z" fill="#7a5d24"/></g>
+        <g transform="translate(65,183) rotate(252)"><path d="M-4 -5 L6 0 L-4 5 Z" fill="#7a5d24"/></g>
+        <g transform="translate(101,71) rotate(324)"><path d="M-4 -5 L6 0 L-4 5 Z" fill="#7a5d24"/></g>
+        <rect x="110" y="38" width="100" height="28" rx="14" fill="#f7efdc" stroke="#d4b463" stroke-width="1.5"/>
         <text x="160" y="56" text-anchor="middle" font-size="11.5" fill="#3a3833">台本をつくる</text>
-        <rect x="210" y="107" width="92" height="28" rx="14" fill="#e9f3e9" stroke="#6aa96e" stroke-width="1.5"/>
+        <rect x="210" y="107" width="92" height="28" rx="14" fill="#f7efdc" stroke="#d4b463" stroke-width="1.5"/>
         <text x="256" y="125" text-anchor="middle" font-size="11.5" fill="#3a3833">動画にする</text>
-        <rect x="176" y="219" width="86" height="28" rx="14" fill="#fdeee4" stroke="#ef8a5a" stroke-width="1.5"/>
+        <rect x="176" y="219" width="86" height="28" rx="14" fill="#fae9e7" stroke="#c9463f" stroke-width="1.5"/>
         <text x="219" y="237" text-anchor="middle" font-size="11.5" fill="#3a3833">投稿する</text>
-        <rect x="54" y="219" width="94" height="28" rx="14" fill="#fdeee4" stroke="#ef8a5a" stroke-width="1.5"/>
+        <rect x="54" y="219" width="94" height="28" rx="14" fill="#fae9e7" stroke="#c9463f" stroke-width="1.5"/>
         <text x="101" y="237" text-anchor="middle" font-size="11.5" fill="#3a3833">数字を渡す</text>
-        <rect x="12" y="107" width="104" height="28" rx="14" fill="#e9f3e9" stroke="#6aa96e" stroke-width="1.5"/>
+        <rect x="12" y="107" width="104" height="28" rx="14" fill="#f7efdc" stroke="#d4b463" stroke-width="1.5"/>
         <text x="64" y="125" text-anchor="middle" font-size="11.5" fill="#3a3833">改善案をもらう</text>
         <text x="160" y="147" text-anchor="middle" font-size="14" font-weight="600" fill="#3a3833" font-family="Hiragino Maru Gothic ProN, Hiragino Kaku Gothic ProN, sans-serif">あなたは</text>
         <text x="160" y="169" text-anchor="middle" font-size="14" font-weight="600" fill="#3a3833" font-family="Hiragino Maru Gothic ProN, Hiragino Kaku Gothic ProN, sans-serif">決めるだけ</text>
       </svg>
       <div class="hanrei">
-        <span class="ai-gawa">緑 ＝ AIがやってくれる</span>
-        <span class="hito-gawa">オレンジ ＝ あなたの作業</span>
+        <span class="ai-gawa">金 ＝ AIがやってくれる</span>
+        <span class="hito-gawa">赤 ＝ あなたの作業</span>
       </div>
     </div>
 
@@ -869,20 +889,20 @@
       <div class="rei-naka">
         <svg viewBox="0 0 320 236" fill="none" role="img" aria-label="3ヶ月かけてSNSを育て、noteの有料記事で月9,800円に届く架空の成長カーブ">
           <line x1="20" y1="164" x2="304" y2="164" stroke="#d8d2c4" stroke-width="1.5"/>
-          <path d="M30 156 Q100 150 150 132 T296 56" stroke="#3d7a42" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-          <circle cx="62" cy="151" r="6" fill="#ffffff" stroke="#3d7a42" stroke-width="2.5"/>
-          <circle cx="160" cy="128" r="6" fill="#ffffff" stroke="#3d7a42" stroke-width="2.5"/>
-          <circle cx="258" cy="78" r="6" fill="#35693a" stroke="#3d7a42" stroke-width="2.5"/>
-          <rect x="154" y="30" width="150" height="30" rx="15" fill="#35693a"/>
+          <path d="M30 156 Q100 150 150 132 T296 56" stroke="#7a5d24" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <circle cx="62" cy="151" r="6" fill="#ffffff" stroke="#7a5d24" stroke-width="2.5"/>
+          <circle cx="160" cy="128" r="6" fill="#ffffff" stroke="#7a5d24" stroke-width="2.5"/>
+          <circle cx="258" cy="78" r="6" fill="#7a5d24" stroke="#7a5d24" stroke-width="2.5"/>
+          <rect x="154" y="30" width="150" height="30" rx="15" fill="#7a5d24"/>
           <text x="229" y="49" text-anchor="middle" font-size="11.5" font-weight="600" fill="#ffffff">980円×10部＝9,800円</text>
-          <rect x="16" y="176" width="92" height="48" rx="10" fill="#e9f3e9" stroke="#6aa96e" stroke-width="1.2"/>
-          <text x="62" y="195" text-anchor="middle" font-size="11" font-weight="600" fill="#35693a">1ヶ月目</text>
+          <rect x="16" y="176" width="92" height="48" rx="10" fill="#f7efdc" stroke="#d4b463" stroke-width="1.2"/>
+          <text x="62" y="195" text-anchor="middle" font-size="11" font-weight="600" fill="#7a5d24">1ヶ月目</text>
           <text x="62" y="211" text-anchor="middle" font-size="11" fill="#3a3833">仕組みづくり</text>
-          <rect x="114" y="176" width="92" height="48" rx="10" fill="#e9f3e9" stroke="#6aa96e" stroke-width="1.2"/>
-          <text x="160" y="195" text-anchor="middle" font-size="11" font-weight="600" fill="#35693a">2ヶ月目</text>
+          <rect x="114" y="176" width="92" height="48" rx="10" fill="#f7efdc" stroke="#d4b463" stroke-width="1.2"/>
+          <text x="160" y="195" text-anchor="middle" font-size="11" font-weight="600" fill="#7a5d24">2ヶ月目</text>
           <text x="160" y="211" text-anchor="middle" font-size="11" fill="#3a3833">AIと数字で改善</text>
-          <rect x="212" y="176" width="92" height="48" rx="10" fill="#e9f3e9" stroke="#6aa96e" stroke-width="1.2"/>
-          <text x="258" y="195" text-anchor="middle" font-size="11" font-weight="600" fill="#35693a">3ヶ月目</text>
+          <rect x="212" y="176" width="92" height="48" rx="10" fill="#f7efdc" stroke="#d4b463" stroke-width="1.2"/>
+          <text x="258" y="195" text-anchor="middle" font-size="11" font-weight="600" fill="#7a5d24">3ヶ月目</text>
           <text x="258" y="211" text-anchor="middle" font-size="11" fill="#3a3833">noteで販売開始</text>
         </svg>
       </div>
@@ -910,18 +930,18 @@
     <div class="zukai">
       <div class="zukai-dai">この階段を、一段ずつ</div>
       <svg viewBox="0 0 320 226" fill="none" role="img" aria-label="画像販売、Web制作、SNSとnoteの3段の階段を一段ずつのぼるロードマップ図">
-        <path d="M40 136 C 100 112, 190 72, 276 44" stroke="#8a5f0e" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 6"/>
-        <path d="M268 40 L278 43 L272 52" stroke="#8a5f0e" stroke-width="2" stroke-linecap="round" fill="none"/>
-        <rect x="20" y="148" width="90" height="50" rx="10" fill="#fdeee4" stroke="#ef8a5a" stroke-width="1.5"/>
-        <text x="65" y="142" text-anchor="middle" font-size="11.5" font-weight="600" fill="#a84a1c">一歩目</text>
+        <path d="M40 136 C 100 112, 190 72, 276 44" stroke="#7a5d24" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 6"/>
+        <path d="M268 40 L278 43 L272 52" stroke="#7a5d24" stroke-width="2" stroke-linecap="round" fill="none"/>
+        <rect x="20" y="148" width="90" height="50" rx="10" fill="#fae9e7" stroke="#c9463f" stroke-width="1.5"/>
+        <text x="65" y="142" text-anchor="middle" font-size="11.5" font-weight="600" fill="#a51e28">一歩目</text>
         <text x="65" y="170" text-anchor="middle" font-size="11" fill="#3a3833">画像販売で</text>
         <text x="65" y="186" text-anchor="middle" font-size="11" fill="#3a3833">最初の1円</text>
-        <rect x="115" y="108" width="90" height="90" rx="10" fill="#e7f1f7" stroke="#5b9fc9" stroke-width="1.5"/>
-        <text x="160" y="102" text-anchor="middle" font-size="11.5" font-weight="600" fill="#2e6f9e">二歩目</text>
+        <rect x="115" y="108" width="90" height="90" rx="10" fill="#f7efdc" stroke="#d4b463" stroke-width="1.5"/>
+        <text x="160" y="102" text-anchor="middle" font-size="11.5" font-weight="600" fill="#7a5d24">二歩目</text>
         <text x="160" y="146" text-anchor="middle" font-size="11" fill="#3a3833">Web制作で</text>
         <text x="160" y="162" text-anchor="middle" font-size="11" fill="#3a3833">単価を上げる</text>
-        <rect x="210" y="68" width="90" height="130" rx="10" fill="#35693a"/>
-        <text x="255" y="62" text-anchor="middle" font-size="11.5" font-weight="600" fill="#35693a">三歩目</text>
+        <rect x="210" y="68" width="90" height="130" rx="10" fill="#1d1811" stroke="#d4b463" stroke-width="1.5"/>
+        <text x="255" y="62" text-anchor="middle" font-size="11.5" font-weight="600" fill="#f0d488">三歩目</text>
         <text x="255" y="126" text-anchor="middle" font-size="11" fill="#ffffff">SNSとnoteで</text>
         <text x="255" y="142" text-anchor="middle" font-size="11" fill="#ffffff">資産型の柱に</text>
         <line x1="10" y1="198" x2="310" y2="198" stroke="#efe9dc" stroke-width="1.5"/>
@@ -937,15 +957,16 @@
 
   <!-- しめくくり（CTA） -->
   <div class="musubi">
+    <div class="musubi-obi">受け取りは、下のオープンチャットから</div>
     <svg width="280" height="56" viewBox="0 0 320 60" fill="none" aria-hidden="true">
-      <circle cx="46" cy="34" r="4" fill="#ef8a5a"/>
-      <rect x="86" y="18" width="8" height="8" rx="2" fill="#f2b64b" transform="rotate(18 90 22)"/>
-      <circle cx="132" cy="42" r="3" fill="#6aa96e"/>
-      <path d="M160 16 L166 26 L154 26 Z" fill="#5b9fc9"/>
-      <circle cx="196" cy="30" r="4" fill="#f2b64b"/>
-      <rect x="228" y="34" width="8" height="8" rx="2" fill="#ef8a5a" transform="rotate(-14 232 38)"/>
-      <circle cx="268" cy="22" r="3" fill="#5b9fc9"/>
-      <path d="M288 38 L294 48 L282 48 Z" fill="#6aa96e"/>
+      <circle cx="46" cy="34" r="4" fill="#c9463f"/>
+      <rect x="86" y="18" width="8" height="8" rx="2" fill="#d4b463" transform="rotate(18 90 22)"/>
+      <circle cx="132" cy="42" r="3" fill="#d4b463"/>
+      <path d="M160 16 L166 26 L154 26 Z" fill="#d4b463"/>
+      <circle cx="196" cy="30" r="4" fill="#d4b463"/>
+      <rect x="228" y="34" width="8" height="8" rx="2" fill="#c9463f" transform="rotate(-14 232 38)"/>
+      <circle cx="268" cy="22" r="3" fill="#d4b463"/>
+      <path d="M288 38 L294 48 L282 48 Z" fill="#d4b463"/>
     </svg>
     <h2>最初の1円を、いっしょに。🎉</h2>
     <p>
@@ -957,6 +978,7 @@
     <a class="musubi-botan" href="https://line.me/ti/g2/OEh5ax_Ksj_cxm4fwzmp6VZYpzZOjhpVTDGVdQ?utm_source=invitation&amp;utm_medium=link_copy&amp;utm_campaign=default">
       AI×SNS 0→1達成コミュニティに<br>参加する（無料）
     </a>
+    <p class="musubi-hint">タップで参加ページが開きます</p>
     <p class="musubi-shita">参加は無料です。<br>合わないと感じたら、いつでも退出できます。</p>
   </div>
 
